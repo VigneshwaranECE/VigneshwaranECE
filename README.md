@@ -27,22 +27,27 @@
 
 <h2> Skills <img src = "https://media2.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif?cid=ecf05e47a0n3gi1bfqntqmob8g9aid1oyj2wr3ds3mg700bl&rid=giphy.gif" width = 20px> </h2>
 <div>
-  <p style="display: inline-block;font-size:"15px;" align="left;">
-      <kbd dir="auto">
-        <kbd style="
-          font-size: large;
-          width: 100%;
-          text-align: center;
-        ">Programming Languages</kbd>
+  <p style="display: inline-block;" align="left">
+    <kbd>
+      <kbd>Programming Languages</kbd>
       <br>
       <br>
-      <img width="40px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg" /> 
-      <img width="40px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" /> 
-      <img width="40px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" />
-      <img width="40px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg" />
-      <img width="40px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" />
-      <img width="40px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" />
+      <img width="50px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg" /> 
+      <img width="50px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" /> 
+      <img width="50px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" />
+      <img width="50px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg" />
+      <img width="50px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" />
+      <img width="50px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" />
     </kbd>
+    <div>
+    <kbd>
+      <kbd>Softwares and Tools</kbd>
+      <br>
+      <br>
+      <img width="30px" src="" /> 
+      <img width="30px" src="" />
+    </kbd>
+  
     
 
 
