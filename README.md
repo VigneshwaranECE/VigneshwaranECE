@@ -56,7 +56,13 @@
       <a><img src="https://www.vectorlogo.zone/logos/unity3d/unity3d-icon.svg" width="55" aspect-ratio="1/5" /> </a>
       <a><img src="https://code.visualstudio.com/assets/images/code-stable.png" alt="vs-code" width="55" aspect-ratio="1/5" /> </a>
     </kbd>
-  
+    </p>
+</div>
+
+<h2> Github Stats <img src = "https://i.pinimg.com/originals/65/c4/f4/65c4f452571be1261e9c623f7da488ac.gif" width = 20px> </h2>
+
+<details> 
+  <summary><b>💻 GitHub Profile Stats</b></summary>
     
 
 
