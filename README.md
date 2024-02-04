@@ -47,15 +47,15 @@
       <kbd>Softwares and Tools</kbd>
       <br>
       <br>
-      <a href="https://www.intel.com/content/www/us/en/products/details/fpga/development-tools/quartus-prime/article.html" target="_blank" rel="noreferrer"><img 
-     src="https://github.com/VigneshwaranECE/VigneshwaranECE/blob/main/Quartus%20Prime.ico" alt="Quartus Prime Lite" width="55" aspect-ratio="5/2" /></a>
-      <a href="https://www.xilinx.com/products/design-tools/vivado.html" target="_blank" rel="noreferrer"><img src="https://maker-hub.georgefox.edu/w/images/8/85/Xilinx_image.jpg" alt="Xilinx Vivado" width="60" 
-      height="55" aspect-ratio="2/5" /></a>
-      <a href="https://www.arduino.cc/" target="_blank" rel="noreferrer"> <img src="https://cdn.worldvectorlogo.com/logos/arduino-1.svg" alt="arduino" width="55" aspect-ratio="1/5" /> </a>
-      <a href="https://www.ni.com/en-in/shop/product/multisim.html" target="_blank" rel="noreferrer"> <img src="https://digilent.com/blog/wp-content/uploads/2015/01/184_multisim_app_icon_ill.png" alt="multisim" 
-      width="55" aspect-ratio="1/5" /> 
-      </a>
-      </kbd>
+      <a><img src="https://github.com/VigneshwaranECE/VigneshwaranECE/blob/main/Quartus%20Prime.ico" alt="Quartus Prime Lite" width="55" aspect-ratio="5/2" /></a>
+      <a><img src="https://maker-hub.georgefox.edu/w/images/8/85/Xilinx_image.jpg" alt="Xilinx Vivado" width="60" height="55" aspect-ratio="2/5" /></a>
+      <a><img src="https://cdn.worldvectorlogo.com/logos/arduino-1.svg" alt="arduino" width="55" aspect-ratio="1/5" /> </a>
+      <a><img src="https://digilent.com/blog/wp-content/uploads/2015/01/184_multisim_app_icon_ill.png" alt="multisim" width="55" aspect-ratio="1/5" /> </a>
+      <a><img src="https://github.com/VigneshwaranECE/VigneshwaranECE/blob/main/PCB-Editor.png" alt="PCB-Editor" width="55" aspect-ratio="1/5" /> </a>
+      <a><img src="https://networkslearning.com/wp-content/uploads/2020/02/Screenshot-2020-02-15-at-15.54.25.png" alt="cisco" width="55" height="55" aspect-ratio="1/5" /> </a>
+      <a><img src="https://www.vectorlogo.zone/logos/unity3d/unity3d-icon.svg" width="55" aspect-ratio="1/5" /> </a>
+      <a><img src="https://code.visualstudio.com/assets/images/code-stable.png" alt="vs-code" width="55" aspect-ratio="1/5" /> </a>
+    </kbd>
   
     
 
