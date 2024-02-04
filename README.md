@@ -52,6 +52,9 @@
       <a href="https://www.xilinx.com/products/design-tools/vivado.html" target="_blank" rel="noreferrer"><img src="https://maker-hub.georgefox.edu/w/images/8/85/Xilinx_image.jpg" alt="Xilinx Vivado" width="60" 
       height="55" aspect-ratio="2/5" /></a>
       <a href="https://www.arduino.cc/" target="_blank" rel="noreferrer"> <img src="https://cdn.worldvectorlogo.com/logos/arduino-1.svg" alt="arduino" width="55" aspect-ratio="1/5" /> </a>
+      <a href="https://www.ni.com/en-in/shop/product/multisim.html" target="_blank" rel="noreferrer"> <img src="https://digilent.com/blog/wp-content/uploads/2015/01/184_multisim_app_icon_ill.png" alt="multisim" 
+      width="55" aspect-ratio="1/5" /> 
+      </a>
       </kbd>
   
     
