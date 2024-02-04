@@ -18,8 +18,8 @@
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
-<a href="https://x.com/YOGIC_MASTER?t=w3kD0qyPKRMixrXWLZjfuQ&s=09" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="VigneshwaranECE" height="30" width="40" /></a>
-<a href="https://www.linkedin.com/in/vigneshwaran-b-689124239/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="rishav-chanda-b89a791b3" height="30" width="40" /></a>
-<a href="https://www.instagram.com/vigneshwaran.legend?igsh=MWltYnFmaGdrMTB5NQ==" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="rishav_chanda" height="30" width="40" /></a>
+<a href="https://x.com/YOGIC_MASTER?t=w3kD0qyPKRMixrXWLZjfuQ&s=09" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="YOGIC_MASTER?t=w3kD0qyPKRMixrXWLZjfuQ&s=09" height="30" width="40" /></a>
+<a href="https://www.linkedin.com/in/vigneshwaran-b-689124239/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="vigneshwaran-b-689124239" height="30" width="40" /></a>
+<a href="https://www.instagram.com/vigneshwaran.legend?igsh=MWltYnFmaGdrMTB5NQ==" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="vigneshwaran.legend?igsh=MWltYnFmaGdrMTB5NQ==" height="30" width="40" /></a>
 <a href="https://www.youtube.com/c/rishav chanda" target="blank"><img align="center" src="https://images.indianexpress.com/2020/10/Gmail-new-logo.jpg?w=640" alt="rishav chanda" height="30" width="40" /></a>
 </p>
