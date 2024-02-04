@@ -6,6 +6,8 @@
   <img src="https://visitcount.itsvg.in/api?id=VigneshwaranECE&label=Profile%20Views&color=6&icon=6&pretty=false" />
 </a>
 
+ ## <picture><img src = "https://github.com/0xAbdulKhalid/0xAbdulKhalid/raw/main/assets/mdImages/about_me.gif" width = 50px></picture> **About me**
+
 - 👨‍🎓 I’m currently pursuing my bachelor's degree in **Electronics and Communication Engineering.**
 
 - 🔭 I’m currently working on **various projects under VLSI frontend & backend and AR apps.**
@@ -16,7 +18,7 @@
 
  - 📫 Reach me at **waran6469@gmail.com**
 
-<h3 align="left">Connect with me:</h3>
+<h2 align="left">Connect with me:</h2>
 <p align="left">
 <a href="https://x.com/YOGIC_MASTER?t=w3kD0qyPKRMixrXWLZjfuQ&s=09" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="YOGIC_MASTER?t=w3kD0qyPKRMixrXWLZjfuQ&s=09" height="30" width="40" /></a>
 <a href="https://www.linkedin.com/in/vigneshwaran-b-689124239/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="vigneshwaran-b-689124239" height="30" width="40" /></a>
