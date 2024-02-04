@@ -38,13 +38,16 @@
       <img width="50px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg" />
       <img width="50px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" />
       <img width="50px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" />
+      <img width="50px" src="https://static-00.iconduck.com/assets.00/file-type-light-systemverilog-icon-512x512-n6etzhly.png" />
+      <img width="50px" src="https://static-00.iconduck.com/assets.00/verilog-icon-474x512-2fxlui3x.png" />
+      <img width="40px" src="https://www.tcl.tk/images/tcllogo.gif" /> 
     </kbd>
     <div>
     <kbd>
       <kbd>Softwares and Tools</kbd>
       <br>
       <br>
-      <img width="30px" src="" /> 
+      <img width="50px" src="https://www.intel.com/content/www/us/en/products/details/fpga/development-tools/quartus-prime/article.html" /> 
       <img width="30px" src="" />
     </kbd>
   
