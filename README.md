@@ -12,7 +12,7 @@
 
 - 🔭 I’m currently working on **various projects under VLSI frontend & backend and AR apps.**
 
- - 🌱 I’m currently learning **PCB Design.**
+ - 🌱 I’m currently learning **Web Development.**
 
  - 💬 Ask me about **VLSI Design and Augmented Reality.**
 
