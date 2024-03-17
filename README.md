@@ -16,7 +16,7 @@
 
  - 💬 Ask me about **VLSI Design and Augmented Reality.**
 
- - 📫 Reach me at **waran6469@gmail.com**
+ - 📫 Reach me at **vigneshwaran.b2021ecec@sece.ac.in**
 
 <h2 align="left">Connect with me:</h2>
 <p align="left">
