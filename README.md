@@ -38,22 +38,18 @@
       <img width="50px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg" />
       <img width="50px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" />
       <img width="50px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" />
-      <img width="50px" src="https://static-00.iconduck.com/assets.00/file-type-light-systemverilog-icon-512x512-n6etzhly.png" />
-      <img width="50px" src="https://static-00.iconduck.com/assets.00/verilog-icon-474x512-2fxlui3x.png" />
-      <img width="40px" src="https://www.tcl.tk/images/tcllogo.gif" /> 
     </kbd>
     <div>
     <kbd>
       <kbd>Softwares and Tools</kbd>
       <br>
       <br>
-      <a><img src="https://github.com/VigneshwaranECE/VigneshwaranECE/blob/main/Quartus%20Prime.ico" alt="Quartus Prime Lite" width="55" aspect-ratio="5/2" /></a>
+      <a><img src="https://github.com/VigneshwaranECE/VigneshwaranECE/blob/main/Unity_logo.png" width="60" height="55" aspect-ratio="2/5 /></a>
       <a><img src="https://maker-hub.georgefox.edu/w/images/8/85/Xilinx_image.jpg" alt="Xilinx Vivado" width="60" height="55" aspect-ratio="2/5" /></a>
-      <a><img src="https://cdn.worldvectorlogo.com/logos/arduino-1.svg" alt="arduino" width="55" aspect-ratio="1/5" /> </a>
-      <a><img src="https://digilent.com/blog/wp-content/uploads/2015/01/184_multisim_app_icon_ill.png" alt="multisim" width="55" aspect-ratio="1/5" /> </a>
-      <a><img src="https://github.com/VigneshwaranECE/VigneshwaranECE/blob/main/PCB-Editor.png" alt="PCB-Editor" width="55" aspect-ratio="1/5" /> </a>
-      <a><img src="https://networkslearning.com/wp-content/uploads/2020/02/Screenshot-2020-02-15-at-15.54.25.png" alt="cisco" width="55" height="55" aspect-ratio="1/5" /> </a>
-      <a><img src="https://www.vectorlogo.zone/logos/unity3d/unity3d-icon.svg" width="55" aspect-ratio="1/5" /> </a>
+      <a><img src="https://github.com/VigneshwaranECE/VigneshwaranECE/blob/main/blender_logo.png" width="55" aspect-ratio="1/5" /> </a>
+      <a><img src="https://github.com/VigneshwaranECE/VigneshwaranECE/blob/main/AR_core.png" width="55" height="55"  aspect-ratio="2/5" /> </a>
+      <a><img src="https://github.com/VigneshwaranECE/VigneshwaranECE/blob/main/SparkAR.png" width="55" aspect-ratio="1/5" /> </a>
+      <a><img src="https://github.com/VigneshwaranECE/VigneshwaranECE/blob/main/Github.jpg" width="55" aspect-ratio="1/5" /> </a>
       <a><img src="https://code.visualstudio.com/assets/images/code-stable.png" alt="vs-code" width="55" aspect-ratio="1/5" /> </a>
     </kbd>
     </p>
