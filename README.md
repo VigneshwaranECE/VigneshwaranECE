@@ -10,11 +10,11 @@
 
 - 👨‍🎓 I’m currently pursuing my bachelor's degree in **Electronics and Communication Engineering.**
 
-- 🔭 I’m currently working on **various projects under AR apps.**
+- 🔭 I’m currently working on **various projects under AR/VR apps.**
 
  - 🌱 I’m currently learning **AR/VR  Development.**
 
- - 💬 Ask me about **Augmented Reality.**
+ - 💬 Ask me about **Augmented/Virtual Reality.**
 
  - 📫 Reach me at **vigneshwaran.b2021ecec@sece.ac.in**
 
