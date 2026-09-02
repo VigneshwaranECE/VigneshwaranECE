@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#050816"/><stop offset="1" stop-color="#101a38"/></linearGradient>
+  <radialGradient id="core"><stop stop-color="#b8f7ff"/><stop offset=".18" stop-color="#55dfff"/><stop offset=".55" stop-color="#1677ff" stop-opacity=".7"/><stop offset="1" stop-color="#071b45" stop-opacity="0"/></radialGradient>
+  <filter id="glow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#4bc7ff" stroke-opacity=".12"/></pattern>
+</defs>
+<rect width="1200" height="520" rx="28" fill="url(#bg)"/>
+<rect x="22" y="22" width="1156" height="476" rx="20" fill="url(#grid)" stroke="#54dcff" stroke-opacity=".35"/>
+<g fill="#8eefff" font-family="monospace"><text x="55" y="62" font-size="15">XR COMMAND CENTER // VIGNESHWARAN B</text><text x="55" y="86" font-size="11" opacity=".65">SPATIAL COMPUTING • REAL-TIME 3D • COMPUTER VISION</text></g>
+<g transform="translate(600 270)" filter="url(#glow)">
+ <circle r="150" fill="none" stroke="#35dfff" stroke-opacity=".16" stroke-width="1"/>
+ <circle r="116" fill="none" stroke="#35dfff" stroke-opacity=".35" stroke-width="2" stroke-dasharray="9 12"><animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="14s" repeatCount="indefinite"/></circle>
+ <circle r="82" fill="none" stroke="#8c7cff" stroke-opacity=".7" stroke-width="2" stroke-dasharray="5 10"><animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="9s" repeatCount="indefinite"/></circle>
+ <circle r="105" fill="url(#core)" opacity=".65"><animate attributeName="r" values="95;112;95" dur="2.5s" repeatCount="indefinite"/></circle>
+ <path d="M-185 0H185M0-185V185" stroke="#58e7ff" stroke-opacity=".12"/>
+ <circle r="22" fill="#d7fbff"><animate attributeName="opacity" values=".5;1;.5" dur="1.5s" repeatCount="indefinite"/></circle>
+</g>
+<g fill="none" stroke="#59e7ff" stroke-width="2" filter="url(#glow)"><path d="M150 145H350L430 190"/><path d="M1050 145H850L770 190"/><path d="M150 390H350L430 350"/><path d="M1050 390H850L770 350"/></g>
+<g font-family="monospace" font-size="14" fill="#c8f8ff">
+ <g><rect x="55" y="115" width="235" height="65" rx="10" fill="#07152d" stroke="#3ddcff" stroke-opacity=".45"/><text x="75" y="142">AR FOUNDATION</text><text x="75" y="164" fill="#6fe8ff">TRACKING / PLANES</text></g>
+ <g><rect x="910" y="115" width="235" height="65" rx="10" fill="#07152d" stroke="#8d7cff" stroke-opacity=".55"/><text x="930" y="142">PICO SDK</text><text x="930" y="164" fill="#a89fff">ENTERPRISE XR</text></g>
+ <g><rect x="55" y="350" width="235" height="65" rx="10" fill="#07152d" stroke="#3ddcff" stroke-opacity=".45"/><text x="75" y="377">COMPUTER VISION</text><text x="75" y="399" fill="#6fe8ff">OPENCV / TRACKING</text></g>
+ <g><rect x="910" y="350" width="235" height="65" rx="10" fill="#07152d" stroke="#8d7cff" stroke-opacity=".55"/><text x="930" y="377">META XR</text><text x="930" y="399" fill="#a89fff">QUEST 2 / 3S</text></g>
+</g>
+<g font-family="monospace" font-size="11" fill="#6eeaff"><text x="55" y="468">● CORE ONLINE</text><text x="260" y="468">● SPATIAL TRACKING ACTIVE</text><text x="530" y="468">● REAL-TIME 3D READY</text><text x="800" y="468">● XR BUILD PIPELINE</text></g>
+<path d="M40 106H1160" stroke="#55dfff" stroke-opacity=".25"><animate attributeName="stroke-opacity" values=".1;.6;.1" dur="2.8s" repeatCount="indefinite"/></path>
+</svg>
