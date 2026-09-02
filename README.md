@@ -1,8 +1,8 @@
 <div align="center">
 
-<a href="https://github.com/VigneshwaranECE"><img src="https://raw.githubusercontent.com/VigneshwaranECE/VigneshwaranECE/main/assets/xr-hero.svg" alt="Vigneshwaran B — XR Engineer" width="100%" /></a>
+<a href="https://github.com/VigneshwaranECE"><img src="https://raw.githubusercontent.com/VigneshwaranECE/VigneshwaranECE/main/assets/xr-system.svg" alt="XR Engineer — Vigneshwaran B" width="100%" /></a>
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=16&duration=2800&pause=900&center=true&vCenter=true&width=620&lines=Building+immersive+XR+experiences;AR+%7C+VR+%7C+MR+%7C+Spatial+Computing;Unity+%7C+Computer+Vision+%7C+WebXR" alt="Typing animation" />
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=17&duration=2200&pause=700&center=true&vCenter=true&width=700&lines=INITIALIZING+XR+SYSTEM...;SPATIAL+TRACKING+%7C+ONLINE;AR+%7C+VR+%7C+MR+%7C+READY;BUILDING+IMMERSIVE+EXPERIENCES" alt="XR system animation" />
 
 </div>
 
@@ -10,21 +10,30 @@
 
 ## 👨‍💻 About Me
 
-I’m an **XR Engineer** focused on building immersive **AR, VR and MR experiences** using real-time 3D, spatial computing and computer vision.
+**XR Engineer** building immersive **AR, VR and MR experiences** with real-time 3D, spatial computing and computer vision.
+
+> **Digital × Physical → Immersive Experiences**
 
 ---
 
-## ⚡ XR Focus
+## ⚡ XR ENGINEERING
 
 <div align="center">
 
-**🥽 AR / VR / MR** &nbsp; • &nbsp; **🎮 Unity & Real-time 3D** &nbsp; • &nbsp; **👁️ Computer Vision** &nbsp; • &nbsp; **🏭 Industrial XR**
+`AR`  ───►  `VR`  ───►  `MR`  ───►  `SPATIAL COMPUTING`
 
 </div>
 
+| | Focus |
+|:---:|:---|
+| 🎮 | Unity & Real-time 3D |
+| 👁️ | Computer Vision & Tracking |
+| 🥽 | AR / VR / MR Development |
+| 🏭 | Industrial XR & Simulation |
+
 ---
 
-## 🛠️ Technology Stack
+## 🛠️ TECHNOLOGY STACK
 
 <div align="center">
 
@@ -32,18 +41,18 @@ I’m an **XR Engineer** focused on building immersive **AR, VR and MR experienc
 
 </div>
 
-**XR / 3D**  
-Unity • AR Foundation • ARKit • ARCore • OpenXR • WebXR • **Pico SDK** • Meta XR SDK
+### XR / 3D
+**Unity • AR Foundation • ARKit • ARCore • OpenXR • WebXR • Pico SDK • Meta XR SDK**
 
-**Computer Vision**  
-OpenCV • Hand Tracking • QR / Marker Tracking • 3D Tracking
+### Computer Vision
+**OpenCV • Hand Tracking • QR / Marker Tracking • 3D Tracking**
 
-**Development**  
-C# • Python • JavaScript • HTML • CSS • Git • GitHub • Blender
+### Development
+**C# • Python • JavaScript • HTML • CSS • Git • GitHub • Blender**
 
 ---
 
-## 🥽 XR Hardware
+## 🥽 XR HARDWARE
 
 <div align="center">
 
@@ -56,24 +65,24 @@ C# • Python • JavaScript • HTML • CSS • Git • GitHub • Blender
 
 ---
 
-## 🚀 Featured Work
+## 🚀 FEATURED WORK
 
 <div align="center">
 
-### Building across AR • VR • MR • Computer Vision • Real-time 3D
+### `XR • AR • VR • MR • COMPUTER VISION`
+
+Building interactive experiences across **immersive applications, spatial interfaces, tracking and real-time 3D**.
 
 </div>
 
-Selected work will be presented here with **project visuals, short descriptions, technology tags and direct repository links**.
-
 ---
 
-## 📊 GitHub Statistics
+## 📊 GITHUB STATS
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=VigneshwaranECE&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true" height="170" alt="GitHub statistics" />
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=VigneshwaranECE&layout=compact&theme=tokyonight&hide_border=true" height="170" alt="Top languages" />
+<img src="https://github-readme-stats.vercel.app/api?username=VigneshwaranECE&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true" height="165" alt="GitHub stats" />
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=VigneshwaranECE&layout=compact&theme=tokyonight&hide_border=true" height="165" alt="Top languages" />
 
 <br><br>
 
@@ -83,17 +92,17 @@ Selected work will be presented here with **project visuals, short descriptions,
 
 ---
 
-## 🔥 GitHub Activity
+## 🔥 DEVELOPMENT ACTIVITY
 
 <div align="center">
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=VigneshwaranECE&theme=tokyo-night&hide_border=true" alt="GitHub activity graph" />
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=VigneshwaranECE&theme=tokyo-night&hide_border=true&area=true" alt="GitHub activity" />
 
 </div>
 
 ---
 
-## 🧠 Current Direction
+## 🧠 BUILDING TOWARDS
 
 <div align="center">
 
@@ -103,7 +112,19 @@ Selected work will be presented here with **project visuals, short descriptions,
 
 ---
 
-## 📫 Connect
+## 📡 SYSTEM STATUS
+
+```text
+XR CORE          ████████████████████  ONLINE
+SPATIAL TRACKING ████████████████████  ACTIVE
+REAL-TIME 3D     ████████████████████  ACTIVE
+COMPUTER VISION  ████████████████████  READY
+IMMERSIVE XR     ████████████████████  BUILDING
+```
+
+---
+
+## 📫 CONNECT
 
 <div align="center">
 
@@ -112,6 +133,6 @@ Selected work will be presented here with **project visuals, short descriptions,
 
 <br><br>
 
-### **Let's build the next layer of reality.** 🚀
+**LET'S BUILD THE NEXT LAYER OF REALITY.** 🚀
 
 </div>
