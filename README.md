@@ -1,83 +1,122 @@
 <div align="center">
 
-<a href="https://github.com/VigneshwaranECE"><img src="https://raw.githubusercontent.com/VigneshwaranECE/VigneshwaranECE/main/assets/xr-command-center.svg" alt="XR Command Center — Vigneshwaran B" width="100%" /></a>
+<img src="https://raw.githubusercontent.com/VigneshwaranECE/VigneshwaranECE/main/assets/xr-command-center.svg" width="100%" alt="XR Engineer Command Center" />
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=16&duration=1800&pause=650&center=true&vCenter=true&width=760&lines=BOOTING+XR+COMMAND+CENTER...;SPATIAL+TRACKING+%7C+ONLINE;AR+%7C+VR+%7C+MR+%7C+ONLINE;PICO+%7C+META+QUEST+%7C+READY;BUILDING+THE+NEXT+LAYER+OF+REALITY" alt="Animated XR status" />
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=17&duration=1600&pause=500&center=true&vCenter=true&width=820&lines=XR+ENGINEER+%2F%2F+VIGNESHWARAN+B;INITIALIZING+SPATIAL+SYSTEMS...;AR+%7C+VR+%7C+MR+%7C+COMPUTER+VISION;UNITY+%7C+PICO+SDK+%7C+META+XR;BUILDING+IMMERSIVE+REALITY" alt="XR terminal animation" />
 
-</div>
+<br/>
 
-<p align="center"><b>XR ENGINEER</b> · Unity · Spatial Computing · Computer Vision · Real-time 3D</p>
-
----
-
-## ◈ XR CORE
-
-> **Digital × Physical → Immersive Experiences**
-
-I build interactive **AR, VR and MR systems** where real-world environments, 3D content and intelligent tracking meet. My focus is turning technical XR capabilities into experiences that are practical, responsive and immersive.
-
-<div align="center">
-
-`AR` ──► `VR` ──► `MR` ──► `SPATIAL COMPUTING` ──► `IMMERSIVE UX`
+`XR ENGINEER` &nbsp; `SPATIAL COMPUTING` &nbsp; `REAL-TIME 3D` &nbsp; `COMPUTER VISION`
 
 </div>
 
 ---
 
-## ⚙️ TECHNOLOGY ECOSYSTEM
+## ◉ WHO AM I?
+
+**I build the layer between the physical world and digital experiences.**
+
+My work sits at the intersection of **Unity, AR/VR/MR, spatial tracking, computer vision and real-time 3D** — turning ideas into interactive immersive systems.
 
 <div align="center">
 
-| LAYER | TOOLING |
-|:---:|:---|
-| 🎮 **ENGINE** | Unity · C# · Real-time 3D |
-| 🥽 **XR** | AR Foundation · ARKit · ARCore · OpenXR · WebXR |
-| 🛰️ **DEVICE** | Pico SDK · Meta XR SDK |
-| 👁️ **VISION** | OpenCV · Hand Tracking · QR / Marker Tracking |
-| 🧊 **3D** | Blender · Spatial Interfaces · Simulation |
-| 💻 **DEV** | Python · JavaScript · HTML · CSS · Git · GitHub |
+**PHYSICAL WORLD** → `SENSE` → `TRACK` → `COMPUTE` → `RENDER` → **IMMERSIVE WORLD**
 
-</div>
-
-<div align="center">
-<img src="https://skillicons.dev/icons?i=unity,cs,python,javascript,html,css,git,github,blender" alt="Technology stack" />
 </div>
 
 ---
 
-## 🥽 XR HARDWARE LAB
+## ⚡ XR STACK
 
 <div align="center">
 
-| PICO ECOSYSTEM | META ECOSYSTEM |
-|:---:|:---:|
-| **Pico G3 Enterprise** | **Meta Quest 2** |
-| **Pico SDK** | **Meta Quest 3S** |
-| Enterprise XR workflows | Standalone VR workflows |
+| 🎮 ENGINE | 🥽 XR | 👁️ VISION | 🧊 3D |
+|:---:|:---:|:---:|:---:|
+| **Unity** | **AR Foundation** | **OpenCV** | **Blender** |
+| C# | ARKit / ARCore | Hand Tracking | Real-time 3D |
+| Rendering | OpenXR | QR / Marker Tracking | Simulation |
+
+<br/>
+
+<img src="https://skillicons.dev/icons?i=unity,cs,python,javascript,html,css,git,github,blender" width="520" alt="Development technologies" />
 
 </div>
 
-`PICO` · `META QUEST` · `OPENXR` · `UNITY` · `SPATIAL TRACKING`
-
 ---
 
-## 🚀 FEATURED XR WORK
-
-### ◉ AR Dashboard / Spatial Interfaces
-Interactive AR dashboard work focused on presenting real-time information inside a spatial environment.
-
-### ◉ AR GPU Renderer
-Exploring real-time rendering and GPU-oriented workflows for immersive applications.
-
-### ◉ Hand Tracking + 3D Computer Vision
-Experimenting with OpenCV, hand tracking and 3D interaction pipelines to connect vision data with immersive environments.
-
-### ◉ Driftfly AR
-AR application work combining Unity-based real-time 3D with spatial interaction.
+## 🧠 HOW I BUILD XR
 
 <div align="center">
 
-<a href="https://github.com/VigneshwaranECE/AR_Dashboard_Render">AR DASHBOARD</a> · <a href="https://github.com/VigneshwaranECE/AR-GPU-Renderer">GPU RENDERER</a> · <a href="https://github.com/VigneshwaranECE/Hand_Tracking-3D-OpenCV">HAND TRACKING</a> · <a href="https://github.com/VigneshwaranECE/Driftfly-AR-App">DRIFTFLY AR</a>
+`01 IDEA`　→　`02 SPATIAL MODEL`　→　`03 TRACKING`　→　`04 INTERACTION`　→　`05 OPTIMIZE`　→　`06 DEPLOY`
+
+</div>
+
+| SYSTEM | CAPABILITY |
+|---|---|
+| 🛰️ **Spatial Tracking** | Planes · anchors · markers · world understanding |
+| 🎯 **XR Interaction** | Ray interaction · spatial UI · object manipulation |
+| 👁️ **Computer Vision** | OpenCV · hand tracking · visual detection |
+| ⚙️ **Real-time 3D** | Unity · rendering · animation · simulation |
+| 🏭 **Industrial XR** | Training · visualization · immersive workflows |
+
+---
+
+## 🥽 HARDWARE LAB
+
+<div align="center">
+
+### PICO
+**Pico G3 Enterprise** · **Pico SDK**
+
+`ENTERPRISE XR` · `STANDALONE` · `IMMERSIVE TRAINING`
+
+### META
+**Meta Quest 2** · **Meta Quest 3S**
+
+`STANDALONE VR` · `SPATIAL INTERACTION` · `META XR`
+
+</div>
+
+---
+
+## 🚀 SELECTED BUILDS
+
+<div align="center">
+
+### `AR DASHBOARD`
+Spatial AR interface work focused on bringing dashboards and information into a real-time 3D environment.
+
+**Unity · AR · Spatial UI**
+
+[ VIEW REPOSITORY →](https://github.com/VigneshwaranECE/AR_Dashboard_Render)
+
+---
+
+### `GPU RENDERER`
+Real-time rendering experiments exploring GPU-oriented workflows for immersive 3D applications.
+
+**Unity · Rendering · GPU**
+
+[ VIEW REPOSITORY →](https://github.com/VigneshwaranECE/AR-GPU-Renderer)
+
+---
+
+### `HAND TRACKING / 3D VISION`
+Computer-vision experiments connecting hand tracking and 3D interaction pipelines.
+
+**OpenCV · Hand Tracking · 3D**
+
+[ VIEW REPOSITORY →](https://github.com/VigneshwaranECE/Hand_Tracking-3D-OpenCV)
+
+---
+
+### `DRIFTFLY AR`
+Unity-based AR application work built around real-time 3D and spatial interaction.
+
+**Unity · AR · Interaction**
+
+[ VIEW REPOSITORY →](https://github.com/VigneshwaranECE/Driftfly-AR-App)
 
 </div>
 
@@ -87,61 +126,67 @@ AR application work combining Unity-based real-time 3D with spatial interaction.
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=VigneshwaranECE&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true" height="165" alt="GitHub statistics" />
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=VigneshwaranECE&layout=compact&theme=tokyonight&hide_border=true" height="165" alt="Top languages" />
+<img src="https://github-readme-stats.vercel.app/api?username=VigneshwaranECE&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true&rank_icon=github" height="170" alt="GitHub statistics" />
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=VigneshwaranECE&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" height="170" alt="Top languages" />
 
-<br><br>
+<br/><br/>
 
-<img src="https://streak-stats.demolab.com?user=VigneshwaranECE&theme=tokyonight&hide_border=true" alt="GitHub streak" />
+<img src="https://streak-stats.demolab.com?user=VigneshwaranECE&theme=tokyonight&hide_border=true" alt="GitHub contribution streak" />
 
-<br><br>
+<br/><br/>
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=VigneshwaranECE&theme=tokyo-night&hide_border=true&area=true" alt="GitHub activity graph" />
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=VigneshwaranECE&theme=tokyo-night&hide_border=true&area=true&custom_title=XR%20BUILD%20ACTIVITY" width="95%" alt="GitHub activity" />
 
 </div>
 
 ---
 
-## 🧬 BUILD PIPELINE
+## 🟢 SYSTEM STATUS
 
 <div align="center">
 
-`IDEA` → `3D WORLD` → `TRACKING` → `INTERACTION` → `OPTIMIZATION` → `DEPLOYMENT`
+| MODULE | STATUS |
+|:---:|:---:|
+| XR CORE | 🟢 ONLINE |
+| SPATIAL TRACKING | 🟢 ACTIVE |
+| REAL-TIME 3D | 🟢 ACTIVE |
+| COMPUTER VISION | 🟢 READY |
+| PICO PIPELINE | 🟢 READY |
+| META XR PIPELINE | 🟢 READY |
+| NEXT EXPERIENCE | 🟡 BUILDING |
 
 </div>
 
 ```text
-XR CORE          ████████████████████  ONLINE
-SPATIAL TRACKING ████████████████████  ACTIVE
-REAL-TIME 3D     ████████████████████  ACTIVE
-COMPUTER VISION  ████████████████████  READY
-IMMERSIVE XR     ████████████████████  BUILDING
+╔════════════════════════════════════════════════════════════╗
+║  XR_ENGINE            [████████████████████]  ONLINE      ║
+║  SPATIAL_SYSTEM       [████████████████████]  ACTIVE      ║
+║  IMMERSIVE_PIPELINE   [███████████████████░]  BUILDING    ║
+╚════════════════════════════════════════════════════════════╝
 ```
 
 ---
 
-## ◇ CURRENT DIRECTION
-
-**Spatial Computing · XR Interaction · Computer Vision · Real-time 3D · Industrial Immersive Experiences**
+## ◈ CURRENTLY BUILDING TOWARDS
 
 <div align="center">
 
-**BUILD. TRACK. INTERACT. IMMERSIVE.**
+`SPATIAL COMPUTING`　`XR INTERACTION`　`COMPUTER VISION`　`REAL-TIME 3D`　`INDUSTRIAL XR`
+
+<br/><br/>
+
+### **BUILD → TRACK → INTERACT → IMMERSIVE**
 
 </div>
 
 ---
 
-## 📫 CONNECT
-
 <div align="center">
 
-<a href="https://github.com/VigneshwaranECE"><img src="https://img.shields.io/badge/GitHub-111827?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
-<a href="https://www.linkedin.com/in/vigneshwaran-b-689124239/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+<a href="https://github.com/VigneshwaranECE"><img src="https://img.shields.io/badge/GitHub-VigneshwaranECE-111827?style=for-the-badge&logo=github" alt="GitHub" /></a>
+<a href="https://www.linkedin.com/in/vigneshwaran-b-689124239/"><img src="https://img.shields.io/badge/LinkedIn-Vigneshwaran%20B-0A66C2?style=for-the-badge&logo=linkedin" alt="LinkedIn" /></a>
 
-<br><br>
-
-`XR ENGINEER` · `SPATIAL BUILDER` · `REAL-TIME 3D`
+<br/><br/>
 
 **LET'S BUILD THE NEXT LAYER OF REALITY.** 🚀
 
