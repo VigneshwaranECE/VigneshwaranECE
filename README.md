@@ -1,86 +1,131 @@
-![logo](https://github.com/VigneshwaranECE/VigneshwaranECE/blob/main/1630053356860mbahead.jpg)
-<h1 align="center">Hi 👋, I'm VIGNESHWARAN B</h1>
-<h3 align="center">A passionate AR/VR Developer and Web developer from India</h3>
+<div align="center">
 
-<a href="https://visitcount.itsvg.in">
-  <img src="https://visitcount.itsvg.in/api?id=VigneshwaranECE&label=Profile%20Views&color=6&icon=6&pretty=false" />
-</a>
+# VIGNESHWARAN B
+### XR ENGINEER
 
- ## <picture><img src = "https://github.com/0xAbdulKhalid/0xAbdulKhalid/raw/main/assets/mdImages/about_me.gif" width = 50px></picture> **About me**
+**AR • VR • MR • SPATIAL COMPUTING**
 
-- 👨‍🎓 I’m currently pursuing my bachelor's degree in **Electronics and Communication Engineering.**
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=18&duration=3000&pause=1000&color=00F7FF&center=true&vCenter=true&width=650&lines=Building+immersive+XR+experiences;Exploring+spatial+computing;Unity+%7C+Computer+Vision+%7C+WebXR;AR+%7C+VR+%7C+MR" alt="Typing animation" />
 
-- 🔭 I’m currently working on **various projects under AR/VR apps.**
-
- - 🌱 I’m currently learning **AR/VR  Development.**
-
- - 💬 Ask me about **Augmented/Virtual Reality.**
-
- - 📫 Reach me at **vigneshwaran.b2021ecec@sece.ac.in**
-
-<h2 align="left">Connect with me:</h2>
-<p align="left">
-<a href="https://x.com/YOGIC_MASTER?t=w3kD0qyPKRMixrXWLZjfuQ&s=09" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="YOGIC_MASTER?t=w3kD0qyPKRMixrXWLZjfuQ&s=09" height="30" width="40" /></a>
-<a href="https://www.linkedin.com/in/vigneshwaran-b-689124239/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="vigneshwaran-b-689124239" height="30" width="40" /></a>
-<a href="https://www.instagram.com/vigneshwaran.legend?igsh=MWltYnFmaGdrMTB5NQ==" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="vigneshwaran.legend?igsh=MWltYnFmaGdrMTB5NQ==" height="30" width="40" /></a>
-</p>
-
-<h2> Skills <img src = "https://media2.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif?cid=ecf05e47a0n3gi1bfqntqmob8g9aid1oyj2wr3ds3mg700bl&rid=giphy.gif" width = 20px> </h2>
-<div>
-  <p style="display: inline-block;" align="left">
-    <kbd>
-      <kbd>Programming Languages</kbd>
-      <br>
-      <br>
-      <img width="50px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg" /> 
-      <img width="50px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" /> 
-      <img width="50px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" />
-      <img width="50px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg" />
-      <img width="50px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" />
-      <img width="50px" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" />
-    </kbd>
-    <div>
-    <kbd>
-      <kbd>Softwares and Tools</kbd>
-      <br>
-      <br>
-      <a><img src="https://github.com/VigneshwaranECE/VigneshwaranECE/blob/main/Unity_logo.png" width="60" height="55" aspect-ratio="2/5 /></a>
-      <a><img src="https://maker-hub.georgefox.edu/w/images/8/85/Xilinx_image.jpg" alt="Xilinx Vivado" width="60" height="55" aspect-ratio="2/5" /></a>
-      <a><img src="https://github.com/VigneshwaranECE/VigneshwaranECE/blob/main/blender_logo.png" width="55" aspect-ratio="1/5" /> </a>
-      <a><img src="https://github.com/VigneshwaranECE/VigneshwaranECE/blob/main/AR_core.png" width="55" height="55"  aspect-ratio="2/5" /> </a>
-      <a><img src="https://github.com/VigneshwaranECE/VigneshwaranECE/blob/main/SparkAR.png" width="55" aspect-ratio="1/5" /> </a>
-      <a><img src="https://github.com/VigneshwaranECE/VigneshwaranECE/blob/main/Github.jpg" width="55" aspect-ratio="1/5" /> </a>
-      <a><img src="https://code.visualstudio.com/assets/images/code-stable.png" alt="vs-code" width="55" aspect-ratio="1/5" /> </a>
-    </kbd>
-    </p>
 </div>
 
-<h2> Github Stats <img src = "https://i.pinimg.com/originals/65/c4/f4/65c4f452571be1261e9c623f7da488ac.gif" width = 20px> </h2>
+---
 
-<details> 
-  <summary><b>💻 GitHub Profile Stats</b></summary>
+## 👨‍💻 About Me
 
+I’m an **XR Engineer** focused on building immersive **AR, VR and MR experiences** using real-time 3D, spatial computing and computer vision.
 
-![](https://github-readme-stats.vercel.app/api?username=VigneshwaranECE&theme=shades-of-purple&hide_border=false&include_all_commits=false&count_private=false)
-![](https://github-readme-streak-stats.herokuapp.com/?user=VigneshwaranECE&theme=shades-of-purple&hide_border=false)
-![](https://github-readme-stats.vercel.app/api/top-langs/?username=VigneshwaranECE&theme=shades-of-purple&hide_border=false&include_all_commits=false&count_private=false&layout=compact)
-</details>
-<br>
+I enjoy turning physical environments into interactive digital experiences through **Unity, XR SDKs, computer vision and 3D technologies**.
 
-<details>
-  <summary><b>⚡ GitHub Activity</b></summary>
-  <img src="github-user-contribution.svg" />
+---
 
-</details>
-    
+## ⚡ XR Focus
 
+| 🥽 Extended Reality | 🎮 3D Development | 👁️ Computer Vision | 🏭 Industrial XR |
+|:---:|:---:|:---:|:---:|
+| AR • VR • MR | Unity • C# | OpenCV • Tracking | Training • Simulation |
+| Spatial Computing | Real-time 3D | Hand Tracking | Maintenance • Visualization |
 
+---
 
+## 🛠️ Technology Stack
 
+### XR / 3D
 
+<p>
+<img src="https://skillicons.dev/icons?i=unity" height="48" alt="Unity" />
+<img src="https://skillicons.dev/icons?i=cs" height="48" alt="C#" />
+<img src="https://skillicons.dev/icons?i=python" height="48" alt="Python" />
+<img src="https://skillicons.dev/icons?i=javascript" height="48" alt="JavaScript" />
+<img src="https://skillicons.dev/icons?i=html" height="48" alt="HTML" />
+<img src="https://skillicons.dev/icons?i=css" height="48" alt="CSS" />
+</p>
 
+**Unity • AR Foundation • ARKit • ARCore • OpenXR • WebXR • Pico SDK • Meta XR SDK**
 
+### Computer Vision
 
+**OpenCV • Hand Tracking • QR / Marker Tracking • 3D Tracking**
 
+### Development
 
+**Git • GitHub • Visual Studio • Blender**
 
+---
+
+## 🥽 XR Hardware
+
+| PICO | META |
+|:---:|:---:|
+| **Pico G3 Enterprise** | **Meta Quest 2** |
+| Pico SDK | **Meta Quest 3S** |
+
+---
+
+## 🚀 Featured Work
+
+<div align="center">
+
+**XR • AR • VR • MR • COMPUTER VISION**
+
+</div>
+
+My work spans immersive applications, AR interfaces, VR experiences, computer vision, tracking and real-time 3D development.
+
+> Selected projects and detailed project showcases will be added here as visual cards with screenshots/GIFs and technology tags.
+
+---
+
+## 📊 GitHub Statistics
+
+<div align="center">
+
+<img src="https://github-readme-stats.vercel.app/api?username=VigneshwaranECE&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true" height="170" alt="GitHub stats" />
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=VigneshwaranECE&layout=compact&theme=tokyonight&hide_border=true" height="170" alt="Top languages" />
+
+<br><br>
+
+<img src="https://streak-stats.demolab.com?user=VigneshwaranECE&theme=tokyonight&hide_border=true" alt="GitHub streak" />
+
+</div>
+
+---
+
+## 🔥 GitHub Activity
+
+<div align="center">
+
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=VigneshwaranECE&theme=tokyo-night&hide_border=true" alt="GitHub activity graph" />
+
+</div>
+
+---
+
+## 🧠 Current Direction
+
+```text
+SPATIAL COMPUTING
+        ↓
+XR INTERACTION
+        ↓
+COMPUTER VISION
+        ↓
+REAL-TIME 3D
+        ↓
+IMMERSIVE EXPERIENCES
+```
+
+---
+
+## 📫 Connect
+
+<div align="center">
+
+<a href="https://github.com/VigneshwaranECE"><img src="https://img.shields.io/badge/GitHub-000000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
+<a href="https://www.linkedin.com/in/vigneshwaran-b-689124239/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+
+<br><br>
+
+### **Let's build the next layer of reality.** 🚀
+
+</div>
