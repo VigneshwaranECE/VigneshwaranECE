@@ -1,10 +1,6 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/VigneshwaranECE/VigneshwaranECE/main/assets/xr-loading-portrait.svg" width="100%" alt="Vigneshwaran B XR Loading Portrait" />
-
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=17&duration=1600&pause=500&center=true&vCenter=true&width=820&lines=XR+ENGINEER+%2F%2F+VIGNESHWARAN+B;INITIALIZING+SPATIAL+SYSTEMS...;AR+%7C+VR+%7C+MR+%7C+COMPUTER+VISION;UNITY+%7C+PICO+SDK+%7C+META+XR;BUILDING+IMMERSIVE+REALITY" alt="XR terminal animation" />
-
-<br/>
+<img src="https://raw.githubusercontent.com/VigneshwaranECE/VigneshwaranECE/main/assets/xr-loading-screen.svg" width="100%" alt="Animated XR loading screen" />
 
 `XR ENGINEER` &nbsp; `SPATIAL COMPUTING` &nbsp; `REAL-TIME 3D` &nbsp; `COMPUTER VISION`
 
@@ -48,7 +44,7 @@ My work sits at the intersection of **Unity, AR/VR/MR, spatial tracking, compute
 
 <div align="center">
 
-`01 IDEA`　→　`02 SPATIAL MODEL`　→　`03 TRACKING`　→　`04 INTERACTION`　→　`05 OPTIMIZE`　→　`06 DEPLOY`
+`01 IDEA` → `02 SPATIAL MODEL` → `03 TRACKING` → `04 INTERACTION` → `05 OPTIMIZE` → `06 DEPLOY`
 
 </div>
 
