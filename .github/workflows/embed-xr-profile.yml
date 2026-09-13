@@ -1,0 +1,55 @@
+name: Build Embedded XR Profile
+
+on:
+  push:
+    paths:
+      - 'assets/Loading Image.jpeg'
+      - 'assets/xr-loading-screen.svg'
+      - '.github/workflows/embed-xr-profile.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  embed:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Embed portrait into SVG
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import base64
+          import re
+
+          src = Path('assets/xr-loading-screen.svg')
+          out = Path('assets/xr-loading-screen-embedded.svg')
+          image = Path('assets/Loading Image.jpeg')
+
+          svg = src.read_text(encoding='utf-8')
+          data = base64.b64encode(image.read_bytes()).decode('ascii')
+          embedded = 'data:image/jpeg;base64,' + data
+
+          svg, count = re.subn(
+              r'<image\s+href="[^"]+"',
+              '<image href="' + embedded + '"',
+              svg,
+              count=1,
+          )
+          if count != 1:
+              raise SystemExit('Could not find the portrait image element in the SVG template.')
+
+          out.write_text(svg, encoding='utf-8')
+          print(f'Created {out} with embedded JPEG ({len(data)} base64 chars).')
+          PY
+
+      - name: Commit generated SVG
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add assets/xr-loading-screen-embedded.svg
+          git diff --cached --quiet || git commit -m 'Create self-contained XR profile SVG'
+          git push
