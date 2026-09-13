@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#050912"/><stop offset="1" stop-color="#0b1220"/></linearGradient>
+  <linearGradient id="bar" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#00d9ff"/><stop offset="0.55" stop-color="#39f5ff"/><stop offset="1" stop-color="#ffffff"/></linearGradient>
+  <filter id="glow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <clipPath id="portraitClip"><rect x="330" y="75" width="540" height="610" rx="28"/></clipPath>
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#1682a8" stroke-opacity=".16"/></pattern>
+</defs>
+<rect width="1200" height="900" fill="url(#bg)"/>
+<rect width="1200" height="900" fill="url(#grid)"/>
+<g font-family="monospace" fill="#63eaff" letter-spacing="3">
+ <text x="55" y="55" font-size="18">XR PROFILE // SYSTEM BOOT</text>
+ <text x="1145" y="55" font-size="14" text-anchor="end">VIGNESHWARAN B</text>
+ <text x="55" y="95" font-size="12">SPATIAL COMPUTING</text>
+ <text x="1145" y="95" font-size="12" text-anchor="end">REAL-TIME 3D // COMPUTER VISION</text>
+</g>
+<rect x="320" y="65" width="560" height="630" rx="35" fill="#07101d" stroke="#00d9ff" stroke-opacity=".45"/>
+<rect x="330" y="75" width="540" height="610" rx="28" fill="#02050a"/>
+<image href="https://raw.githubusercontent.com/VigneshwaranECE/VigneshwaranECE/main/assets/xr-loading-portrait.svg" x="330" y="75" width="540" height="610" preserveAspectRatio="xMidYMid slice" clip-path="url(#portraitClip)"/>
+<rect x="330" y="75" width="540" height="610" rx="28" fill="#001522" opacity=".10"/>
+<g stroke="#00d9ff" stroke-width="4" fill="none">
+ <path d="M300 125V85H340 M860 85H900V125 M300 635V675H340 M860 675H900V635"/>
+</g>
+<g stroke="#63eaff" opacity=".55"><path d="M330 170H870"/><path d="M330 340H870"/><path d="M330 510H870"/></g>
+<rect x="0" y="75" width="1200" height="3" fill="#63eaff" opacity=".8" filter="url(#glow)">
+ <animate attributeName="y" values="75;685;75" dur="3s" repeatCount="indefinite"/>
+</rect>
+<g font-family="monospace" fill="#ffffff" text-anchor="middle">
+ <text x="600" y="755" font-size="44" font-weight="bold" letter-spacing="8">LOADING...</text>
+ <text x="600" y="785" font-size="13" fill="#63eaff" letter-spacing="4">INITIALIZING XR PROFILE</text>
+</g>
+<rect x="145" y="810" width="910" height="22" rx="11" fill="#07101d" stroke="#00d9ff" stroke-width="2"/>
+<rect x="155" y="820" width="890" height="2" fill="#00d9ff" opacity=".25"/>
+<rect x="155" y="814" width="0" height="14" rx="7" fill="url(#bar)" filter="url(#glow)">
+ <animate attributeName="width" values="0;890" dur="6s" repeatCount="indefinite"/>
+</rect>
+<g font-family="monospace" font-size="13" fill="#63eaff">
+ <text x="145" y="855">0%</text><text x="327" y="855">20%</text><text x="509" y="855">40%</text><text x="691" y="855">60%</text><text x="873" y="855">80%</text><text x="1040" y="855">100%</text>
+</g>
+<g fill="#63eaff" font-family="monospace" font-size="12">
+ <text x="55" y="750">● CORE ONLINE</text><text x="55" y="775">● TRACKING ACTIVE</text>
+ <text x="1145" y="750" text-anchor="end">● UNITY READY</text><text x="1145" y="775" text-anchor="end">● XR PIPELINE READY</text>
+</g>
+</svg>
