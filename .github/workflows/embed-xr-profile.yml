@@ -18,29 +18,67 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Embed portrait into SVG
+      - name: Build large readable self-contained XR SVG
         run: |
           python3 - <<'PY'
           from pathlib import Path
           import base64
           import re
 
-          src = Path('assets/xr-loading-screen.svg')
-          out = Path('assets/xr-loading-screen-embedded.svg')
+          path = Path('assets/xr-loading-screen.svg')
           image = Path('assets/Loading Image.jpeg')
-          svg = src.read_text(encoding='utf-8')
+          svg = path.read_text(encoding='utf-8')
+
+          # Embed the portrait directly so GitHub never has to load an external image.
           data = base64.b64encode(image.read_bytes()).decode('ascii')
-          embedded = 'data:image/jpeg;base64,' + data
-          svg, count = re.subn(r'<image\s+href="[^"]+"', '<image href="' + embedded + '"', svg, count=1)
-          if count != 1:
-              raise SystemExit('Could not find portrait image element.')
-          out.write_text(svg, encoding='utf-8')
+          svg = re.sub(r'<image\s+href="[^"]+"', '<image href="data:image/jpeg;base64,' + data + '"', svg, count=1)
+
+          # Make the HUD typography substantially larger and easier to read.
+          sizes = {
+              'font-size="22"': 'font-size="30"',
+              'font-size="14"': 'font-size="19"',
+              'font-size="13"': 'font-size="17"',
+              'font-size="40"': 'font-size="48"'
+          }
+          for a, b in sizes.items():
+              svg = svg.replace(a, b)
+
+          # Add a true 0→100 reveal: the portrait starts completely black and is
+          # progressively revealed behind a bright scanning beam.
+          svg = svg.replace(
+              '<clipPath id="p"><rect x="490" y="82" width="556" height="620" rx="28"/></clipPath>',
+              '<clipPath id="p"><rect x="490" y="82" width="556" height="620" rx="28"/></clipPath>'
+              '<mask id="reveal"><rect x="490" y="82" width="556" height="620" fill="black"/>'
+              '<rect x="490" y="82" width="0" height="620" fill="white"><animate attributeName="width" values="0;556;556;0" keyTimes="0;.72;.82;1" dur="8s" repeatCount="indefinite"/></rect></mask>'
+          )
+
+          svg = svg.replace(
+              '<g clip-path="url(#p)"><image ',
+              '<g clip-path="url(#p)"><rect x="490" y="82" width="556" height="620" fill="#010509"/> '
+              '<image mask="url(#reveal)" '
+          )
+
+          # Synchronize the progress bar with the reveal animation.
+          svg = re.sub(
+              r'<animate attributeName="width" values="0;972;0" dur="8s" repeatCount="indefinite"/>',
+              '<animate attributeName="width" values="0;972;972;0" keyTimes="0;.72;.82;1" dur="8s" repeatCount="indefinite"/>',
+              svg
+          )
+
+          # Keep the scan beam synchronized with the image reveal.
+          svg = re.sub(
+              r'<animate attributeName="y" values="82;698;82" dur="4s" repeatCount="indefinite"/>',
+              '<animate attributeName="y" values="82;698;82" dur="8s" repeatCount="indefinite"/>',
+              svg
+          )
+
+          path.write_text(svg, encoding='utf-8')
           PY
 
-      - name: Commit generated SVG
+      - name: Commit updated SVG
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add assets/xr-loading-screen-embedded.svg
-          git diff --cached --quiet || git commit -m 'Create self-contained XR profile SVG'
+          git add assets/xr-loading-screen.svg
+          git diff --cached --quiet || git commit -m 'Improve XR loading screen reveal and readability'
           git push
