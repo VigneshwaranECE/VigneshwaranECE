@@ -17,9 +17,9 @@ jobs:
           from pathlib import Path
           from PIL import Image,ImageDraw,ImageFont,ImageEnhance,ImageFilter
           src=Path('assets/Loading Image.jpeg')
-          W,H=1900,960
+          W,H=2100,960
           ix,iy,iw,ih=400,105,1080,650
-          rx=1530
+          rx=1570
           photo=Image.open(src).convert('RGB')
           photo=ImageEnhance.Contrast(photo).enhance(1.03)
           photo=ImageEnhance.Sharpness(photo).enhance(1.35)
@@ -57,19 +57,19 @@ jobs:
               im=Image.alpha_composite(im.convert('RGBA'),gl.filter(ImageFilter.GaussianBlur(4))).convert('RGB'); d=ImageDraw.Draw(im)
             for j,s in enumerate(['■ CORE ONLINE','■ ASSETS LOADED','■ PROFILE SYNC','■ READY SOON']): d.text((50,560+j*36),s,font=f,fill=cyan)
             for j,s in enumerate(['● UNITY READY','● XR PIPELINE READY','● MODULES LOADED','● PROFILE READY']): d.text((rx,560+j*36),s,font=f,fill=cyan)
-            d.text((950,805),'LOADING...',font=fl,fill=white,anchor='mm'); d.text((950,842),'REVEALING XR PROFILE',font=f,fill=cyan,anchor='mm')
-            d.rounded_rectangle((180,875,1720,901),13,fill=(6,21,34),outline=cyan,width=3); d.rounded_rectangle((188,883,188+int(1524*q),893),5,fill=cyan)
-            for i in range(11): d.text((180+i*154,930),f'{i*10}%',font=fs,fill=cyan,anchor='mm')
+            d.text((1050,805),'LOADING...',font=fl,fill=white,anchor='mm'); d.text((1050,842),'REVEALING XR PROFILE',font=f,fill=cyan,anchor='mm')
+            d.rounded_rectangle((250,875,1850,901),13,fill=(6,21,34),outline=cyan,width=3); d.rounded_rectangle((258,883,258+int(1584*q),893),5,fill=cyan)
+            for i in range(11): d.text((250+i*160,930),f'{i*10}%',font=fs,fill=cyan,anchor='mm')
             frames.append(im.quantize(colors=256,dither=Image.Dither.NONE))
           frames[0].save('assets/xr-profile-loading.gif',save_all=True,append_images=frames[1:],duration=280,disposal=2,optimize=True,loop=None)
-          Path('assets/xr-loading-screen.svg').write_text('''<svg xmlns="http://www.w3.org/2000/svg" width="1900" height="960" viewBox="0 0 1900 960"><rect width="1900" height="960" fill="#020914"/><text x="50" y="76" fill="#39e5ff" font-size="38" font-family="monospace">XR PROFILE</text><text x="1530" y="76" fill="#f5ffff" font-size="38" font-family="monospace">VIGNESHWARAN B</text><text x="950" y="930" fill="#39e5ff" font-size="20" font-family="monospace" text-anchor="middle">0%  10%  20%  30%  40%  50%  60%  70%  80%  90%  100%</text></svg>''')
+          Path('assets/xr-loading-screen.svg').write_text('''<svg xmlns="http://www.w3.org/2000/svg" width="2100" height="960" viewBox="0 0 2100 960"><rect width="2100" height="960" fill="#020914"/><text x="50" y="76" fill="#39e5ff" font-size="38" font-family="monospace">XR PROFILE</text><text x="1570" y="76" fill="#f5ffff" font-size="38" font-family="monospace">VIGNESHWARAN B</text><text x="1050" y="930" fill="#39e5ff" font-size="20" font-family="monospace" text-anchor="middle">0%  10%  20%  30%  40%  50%  60%  70%  80%  90%  100%</text></svg>''')
           Path('assets/xr-loading-screen-embedded.svg').write_text(Path('assets/xr-loading-screen.svg').read_text())
           PY
           python3 /tmp/build.py
       - name: Commit generated profile
         run: |
           git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git config user.email '41898282+users.noreply.github.com'
           git add assets/xr-profile-loading.gif assets/xr-loading-screen.svg assets/xr-loading-screen-embedded.svg
-          git diff --cached --quiet || git commit -m 'Add gap before right XR profile text'
+          git diff --cached --quiet || git commit -m 'Increase XR template width for right-side content'
           git push
