@@ -34,7 +34,7 @@ jobs:
             <filter id="glow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
             <pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#0780a5" opacity=".35"/></pattern>
             <clipPath id="photoClip"><rect x="490" y="82" width="556" height="620" rx="28"/></clipPath>
-            <mask id="photoReveal"><rect x="490" y="82" width="556" height="620" fill="black"/><rect x="490" y="82" width="0" height="620" fill="white"><animate attributeName="width" values="0;556;556;0" keyTimes="0;.72;.82;1" dur="8s" repeatCount="indefinite"/></rect></mask>
+            <mask id="photoReveal"><rect x="490" y="82" width="556" height="620" fill="black"/><rect x="490" y="82" width="0" height="620" fill="white"><animate attributeName="width" values="0;556" dur="8s" fill="freeze"/></rect></mask>
           </defs>
 
           <rect width="1536" height="970" fill="url(#bg)"/>
@@ -46,7 +46,6 @@ jobs:
             <text x="72" y="202" font-size="20" letter-spacing="3">REAL-TIME 3D</text>
             <text x="72" y="238" font-size="20" letter-spacing="3">COMPUTER VISION</text>
             <text x="72" y="274" font-size="20" letter-spacing="3">AR / VR / MR</text>
-
             <text x="1190" y="110" font-size="30" font-weight="bold" letter-spacing="4">VIGNESHWARAN B</text>
             <text x="1190" y="166" font-size="20" letter-spacing="3">UNITY DEVELOPER</text>
             <text x="1190" y="202" font-size="20" letter-spacing="3">XR ENGINEER</text>
@@ -60,9 +59,9 @@ jobs:
             <image href="data:image/jpeg;base64,{data}" x="490" y="82" width="556" height="620" preserveAspectRatio="xMidYMid meet" mask="url(#photoReveal)"/>
           </g>
 
-          <!-- Vertical reveal scanner: no horizontal scan line -->
+          <!-- One-time vertical reveal scanner; stops at 100% -->
           <rect x="490" y="82" width="4" height="620" fill="#ffffff" filter="url(#glow)">
-            <animate attributeName="x" values="490;1046;1046;490" keyTimes="0;.72;.82;1" dur="8s" repeatCount="indefinite"/>
+            <animate attributeName="x" values="490;1046" dur="8s" fill="freeze"/>
           </rect>
 
           <g fill="none" stroke="#00eaff" stroke-width="5" filter="url(#glow)">
@@ -71,7 +70,7 @@ jobs:
 
           <g fill="#55ddff" font-family="monospace" font-size="18" letter-spacing="2">
             <text x="72" y="650">■ CORE ONLINE</text><text x="72" y="682">■ ASSETS LOADING</text><text x="72" y="714">■ PROFILE SYNC</text><text x="72" y="746">■ READY SOON</text>
-            <text x="1190" y="650">● UNITY READY</text><text x="1190" y="682">● XR PIPELINE READY</text><text x="1190" y="714">● MODULES LOADED</text><text x="1190" y="746">● INITIALIZING PROFILE</text>
+            <text x="1190" y="650">● UNITY READY</text><text x="1190" y="682">● XR PIPELINE READY</text><text x="1190" y="714">● MODULES LOADED</text><text x="1190" y="746">● PROFILE READY</text>
           </g>
 
           <g font-family="monospace" text-anchor="middle">
@@ -81,7 +80,7 @@ jobs:
 
           <rect x="250" y="838" width="1036" height="28" rx="14" fill="#06131f" stroke="#00dfff" stroke-width="2"/>
           <rect x="257" y="845" width="0" height="14" rx="7" fill="url(#cyan)">
-            <animate attributeName="width" values="0;1022;1022;0" keyTimes="0;.72;.82;1" dur="8s" repeatCount="indefinite"/>
+            <animate attributeName="width" values="0;1022" dur="8s" fill="freeze"/>
           </rect>
 
           <g font-family="monospace" font-size="18" fill="#55ddff">
@@ -101,7 +100,7 @@ jobs:
 
           readme = Path('README.md')
           text = readme.read_text(encoding='utf-8')
-          text = text.replace('assets/xr-loading-screen-embedded.svg"', 'assets/xr-loading-screen-embedded.svg?v=4"')
+          text = text.replace('assets/xr-loading-screen-embedded.svg?v=4', 'assets/xr-loading-screen-embedded.svg?v=5')
           readme.write_text(text, encoding='utf-8')
           PY
 
@@ -110,5 +109,5 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add assets/xr-loading-screen.svg assets/xr-loading-screen-embedded.svg README.md
-          git diff --cached --quiet || git commit -m 'Update XR profile loading design without horizontal scan line'
+          git diff --cached --quiet || git commit -m 'Make XR profile reveal stop at 100 percent'
           git push
