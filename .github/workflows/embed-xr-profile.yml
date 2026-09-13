@@ -1,10 +1,9 @@
-name: Build Embedded XR Profile
+name: Build XR Profile GIF
 
 on:
   push:
     paths:
       - 'assets/Loading Image.jpeg'
-      - 'assets/xr-loading-screen.svg'
       - '.github/workflows/embed-xr-profile.yml'
   workflow_dispatch:
 
@@ -18,96 +17,70 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Build new XR loading SVG
+      - name: Install Pillow
+        run: python3 -m pip install --quiet Pillow
+
+      - name: Create one-time XR loading GIF
         run: |
           python3 - <<'PY'
+          from PIL import Image, ImageDraw, ImageFont, ImageFilter
           from pathlib import Path
-          import base64
 
-          image = Path('assets/Loading Image.jpeg')
-          data = base64.b64encode(image.read_bytes()).decode('ascii')
+          W,H=800,505
+          photo=Image.open('assets/Loading Image.jpeg').convert('RGB')
+          scale=min(556/photo.width,620/photo.height)
+          pw,ph=round(photo.width*scale),round(photo.height*scale)
+          photo=photo.resize((pw,ph),Image.Resampling.LANCZOS)
+          px,py=(556-pw)//2,(620-ph)//2
+          regular=ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf',10)
+          small=ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf',9)
+          bold=ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSansMono-Bold.ttf',15)
+          title=ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSansMono-Bold.ttf',16)
+          frames=[]
+          N=25
+          for i in range(N):
+              t=i/(N-1); reveal=min(1,t/0.82)
+              im=Image.new('RGB',(W,H),(2,9,17)); d=ImageDraw.Draw(im)
+              for y in range(0,H,14):
+                  for x in range(0,W,14): d.point((x,y),fill=(4,48,65))
+              cyan=(55,220,255); white=(245,255,255)
+              d.text((38,25),'XR PROFILE // INITIALIZING',font=title,fill=cyan)
+              for j,s in enumerate(['SPATIAL COMPUTING','REAL-TIME 3D','COMPUTER VISION','AR / VR / MR']): d.text((38,55+j*18),s,font=regular,fill=cyan)
+              d.text((620,25),'VIGNESHWARAN B',font=title,fill=cyan)
+              for j,s in enumerate(['UNITY DEVELOPER','XR ENGINEER','INTERACTIVE EXPERIENCES','BUILDING IMMERSIVE WORLDS']): d.text((620,55+j*18),s,font=regular,fill=cyan)
+              box=(250,38,550,374); d.rounded_rectangle(box,18,fill=(0,15,25),outline=cyan,width=3)
+              pb=(255,43,545,369); d.rounded_rectangle(pb,14,fill=(1,5,9))
+              if reveal>0:
+                  layer=Image.new('RGB',(W,H),(0,0,0)); layer.paste(photo,(255+px,43+py))
+                  mask=Image.new('L',(W,H),0); md=ImageDraw.Draw(mask); md.rectangle((255,43,255+int(290*reveal),369),fill=255)
+                  rounded=Image.new('L',(W,H),0); ImageDraw.Draw(rounded).rounded_rectangle(pb,14,fill=255)
+                  import PIL.ImageChops as C; mask=C.multiply(mask,rounded); im.paste(layer,(0,0),mask)
+              d=ImageDraw.Draw(im)
+              if reveal<1:
+                  sx=255+int(290*reveal)
+                  glow=Image.new('RGBA',(W,H),(0,0,0,0)); gd=ImageDraw.Draw(glow); gd.line((sx,43,sx,369),fill=(255,255,255,240),width=3); gd.line((sx-5,43,sx+5,369),fill=(0,220,255,90),width=8); glow=glow.filter(ImageFilter.GaussianBlur(2)); im=Image.alpha_composite(im.convert('RGBA'),glow).convert('RGB'); d=ImageDraw.Draw(im)
+              d.line((232,68,232,43,260,43),fill=cyan,width=3); d.line((568,68,568,43,540,43),fill=cyan,width=3); d.line((232,344,232,369,260,369),fill=cyan,width=3); d.line((568,344,568,369,540,369),fill=cyan,width=3)
+              for j,s in enumerate(['■ CORE ONLINE','■ ASSETS LOADING','■ PROFILE SYNC','■ READY SOON']): d.text((38,338+j*16),s,font=small,fill=cyan)
+              for j,s in enumerate(['● UNITY READY','● XR PIPELINE READY','● MODULES LOADED','● PROFILE READY']): d.text((620,338+j*16),s,font=small,fill=cyan)
+              d.text((400,405),'LOADING...',font=bold,fill=white,anchor='mm'); d.text((400,426),'REVEALING XR PROFILE',font=small,fill=cyan,anchor='mm')
+              d.rounded_rectangle((130,443,670,458),7,fill=(5,18,29),outline=cyan,width=1); d.rounded_rectangle((134,447,134+int(532*reveal),454),4,fill=(55,220,255))
+              for x,p in zip([135,242,349,456,563,665],['0%','20%','40%','60%','80%','100%']): d.text((x,470),p,font=small,fill=cyan,anchor='mm')
+              frames.append(im.convert('P',palette=Image.Palette.ADAPTIVE,colors=128))
+          out=Path('assets/xr-profile-loading.gif')
+          # No loop extension: the GIF plays once and freezes on its final frame.
+          frames[0].save(out,save_all=True,append_images=frames[1:],duration=320,disposal=2,optimize=True)
 
-          svg = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1536 970">
-          <defs>
-            <radialGradient id="bg"><stop stop-color="#07182a"/><stop offset="1" stop-color="#01060d"/></radialGradient>
-            <linearGradient id="cyan"><stop stop-color="#00bfff"/><stop offset=".5" stop-color="#00ffff"/><stop offset="1" stop-color="#ffffff"/></linearGradient>
-            <filter id="glow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-            <pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#0780a5" opacity=".35"/></pattern>
-            <clipPath id="photoClip"><rect x="490" y="82" width="556" height="620" rx="28"/></clipPath>
-            <mask id="photoReveal"><rect x="490" y="82" width="556" height="620" fill="black"/><rect x="490" y="82" width="0" height="620" fill="white"><animate attributeName="width" values="0;556" dur="8s" fill="freeze"/></rect></mask>
-          </defs>
-
-          <rect width="1536" height="970" fill="url(#bg)"/>
-          <rect x="20" y="20" width="1496" height="930" fill="url(#dots)" opacity=".55"/>
-
-          <g fill="#52dfff" font-family="monospace">
-            <text x="72" y="110" font-size="30" font-weight="bold" letter-spacing="5">XR PROFILE // INITIALIZING</text>
-            <text x="72" y="166" font-size="20" letter-spacing="3">SPATIAL COMPUTING</text>
-            <text x="72" y="202" font-size="20" letter-spacing="3">REAL-TIME 3D</text>
-            <text x="72" y="238" font-size="20" letter-spacing="3">COMPUTER VISION</text>
-            <text x="72" y="274" font-size="20" letter-spacing="3">AR / VR / MR</text>
-            <text x="1190" y="110" font-size="30" font-weight="bold" letter-spacing="4">VIGNESHWARAN B</text>
-            <text x="1190" y="166" font-size="20" letter-spacing="3">UNITY DEVELOPER</text>
-            <text x="1190" y="202" font-size="20" letter-spacing="3">XR ENGINEER</text>
-            <text x="1190" y="238" font-size="20" letter-spacing="3">INTERACTIVE EXPERIENCES</text>
-            <text x="1190" y="274" font-size="20" letter-spacing="3">BUILDING IMMERSIVE WORLDS</text>
-          </g>
-
-          <rect x="480" y="72" width="576" height="640" rx="36" fill="#00101c" stroke="#00dfff" stroke-width="4" filter="url(#glow)"/>
-          <rect x="490" y="82" width="556" height="620" rx="28" fill="#010509"/>
-          <g clip-path="url(#photoClip)">
-            <image href="data:image/jpeg;base64,{data}" x="490" y="82" width="556" height="620" preserveAspectRatio="xMidYMid meet" mask="url(#photoReveal)"/>
-          </g>
-
-          <!-- One-time vertical reveal scanner; stops at 100% -->
-          <rect x="490" y="82" width="4" height="620" fill="#ffffff" filter="url(#glow)">
-            <animate attributeName="x" values="490;1046" dur="8s" fill="freeze"/>
-          </rect>
-
-          <g fill="none" stroke="#00eaff" stroke-width="5" filter="url(#glow)">
-            <path d="M458 126V82H505M1078 126V82H1033M458 658V702H505M1078 658V702H1033"/>
-          </g>
-
-          <g fill="#55ddff" font-family="monospace" font-size="18" letter-spacing="2">
-            <text x="72" y="650">■ CORE ONLINE</text><text x="72" y="682">■ ASSETS LOADING</text><text x="72" y="714">■ PROFILE SYNC</text><text x="72" y="746">■ READY SOON</text>
-            <text x="1190" y="650">● UNITY READY</text><text x="1190" y="682">● XR PIPELINE READY</text><text x="1190" y="714">● MODULES LOADED</text><text x="1190" y="746">● PROFILE READY</text>
-          </g>
-
-          <g font-family="monospace" text-anchor="middle">
-            <text x="768" y="780" fill="#ffffff" font-size="52" font-weight="bold" letter-spacing="9">LOADING...</text>
-            <text x="768" y="814" fill="#61eaff" font-size="19" letter-spacing="6">REVEALING XR PROFILE</text>
-          </g>
-
-          <rect x="250" y="838" width="1036" height="28" rx="14" fill="#06131f" stroke="#00dfff" stroke-width="2"/>
-          <rect x="257" y="845" width="0" height="14" rx="7" fill="url(#cyan)">
-            <animate attributeName="width" values="0;1022" dur="8s" fill="freeze"/>
-          </rect>
-
-          <g font-family="monospace" font-size="18" fill="#55ddff">
-            <text x="260" y="898">0%</text><text x="465" y="898">20%</text><text x="670" y="898">40%</text><text x="875" y="898">60%</text><text x="1080" y="898">80%</text><text x="1280" y="898" text-anchor="end">100%</text>
-          </g>
-
-          <g font-family="monospace" font-size="18" text-anchor="middle">
-            <rect x="350" y="920" width="170" height="38" rx="10" fill="#07131f" stroke="#147da8"/><text x="435" y="945" fill="#b8f6ff">XR ENGINEER</text>
-            <rect x="545" y="920" width="220" height="38" rx="10" fill="#07131f" stroke="#147da8"/><text x="655" y="945" fill="#b8f6ff">SPATIAL COMPUTING</text>
-            <rect x="790" y="920" width="200" height="38" rx="10" fill="#07131f" stroke="#147da8"/><text x="890" y="945" fill="#b8f6ff">REAL-TIME 3D</text>
-            <rect x="1015" y="920" width="215" height="38" rx="10" fill="#07131f" stroke="#147da8"/><text x="1122" y="945" fill="#b8f6ff">COMPUTER VISION</text>
-          </g>
-          </svg>'''
-
-          Path('assets/xr-loading-screen.svg').write_text(svg, encoding='utf-8')
-          Path('assets/xr-loading-screen-embedded.svg').write_text(svg, encoding='utf-8')
-
-          readme = Path('README.md')
-          text = readme.read_text(encoding='utf-8')
-          text = text.replace('assets/xr-loading-screen-embedded.svg?v=4', 'assets/xr-loading-screen-embedded.svg?v=5')
-          readme.write_text(text, encoding='utf-8')
+          readme=Path('README.md'); text=readme.read_text(encoding='utf-8')
+          old='<img src="https://raw.githubusercontent.com/VigneshwaranECE/VigneshwaranECE/main/assets/xr-loading-screen.svg?v=20260913" width="100%" alt="Animated XR loading screen" />'
+          new='<img src="https://raw.githubusercontent.com/VigneshwaranECE/VigneshwaranECE/main/assets/xr-profile-loading.gif?v=1" width="100%" alt="XR profile loading animation" />'
+          if old not in text: raise SystemExit('README image reference not found')
+          readme.write_text(text.replace(old,new),encoding='utf-8')
           PY
 
-      - name: Commit final XR design
+      - name: Commit GIF and README
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add assets/xr-loading-screen.svg assets/xr-loading-screen-embedded.svg README.md
-          git diff --cached --quiet || git commit -m 'Make XR profile reveal stop at 100 percent'
+          git add assets/xr-profile-loading.gif README.md
+          git diff --cached --quiet || git commit -m 'Use one-time XR loading GIF in profile'
           git push
