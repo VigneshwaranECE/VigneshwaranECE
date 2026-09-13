@@ -10,20 +10,24 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Generate wider XR profile GIF
+      - name: Generate smart-fit high-quality XR profile GIF
         run: |
           python3 -m pip install --quiet Pillow
           cat > /tmp/build.py <<'PY'
           from pathlib import Path
           from PIL import Image,ImageDraw,ImageFont,ImageEnhance,ImageFilter
           src=Path('assets/Loading Image.jpeg')
-          W,H=1800,900
-          ix,iy,iw,ih=370,95,1000,560
+          W,H=1900,960
+          ix,iy,iw,ih=400,105,1080,650
           photo=Image.open(src).convert('RGB')
-          photo=ImageEnhance.Sharpness(ImageEnhance.Contrast(photo).enhance(1.04)).enhance(1.2)
+          # Preserve the original portrait proportions and use a smart cover crop.
+          photo=ImageEnhance.Contrast(photo).enhance(1.03)
+          photo=ImageEnhance.Sharpness(photo).enhance(1.35)
           scale=max(iw/photo.width,ih/photo.height)
           photo=photo.resize((round(photo.width*scale),round(photo.height*scale)),Image.Resampling.LANCZOS)
-          l=(photo.width-iw)//2; t=(photo.height-ih)//2
+          # Bias the crop slightly upward so the face stays centered while more of the shirt remains visible.
+          l=(photo.width-iw)//2
+          t=max(0,min(photo.height-ih, int((photo.height-ih)*0.38)))
           photo=photo.crop((l,t,l+iw,t+ih))
           mono='/usr/share/fonts/truetype/dejavu/'
           f=ImageFont.truetype(mono+'DejaVuSansMono.ttf',25)
@@ -37,33 +41,36 @@ jobs:
             im=Image.new('RGB',(W,H),(2,9,17)); d=ImageDraw.Draw(im)
             for y in range(0,H,28):
               for x in range(0,W,28): d.point((x,y),fill=(5,45,61))
-            d.text((40,34),'XR PROFILE',font=fb,fill=cyan)
-            for y,s in [(76,'SPATIAL COMPUTING'),(113,'REAL-TIME 3D'),(150,'COMPUTER VISION'),(187,'AR / VR / MR')]: d.text((40,y),s,font=f,fill=white)
-            d.text((1400,34),'VIGNESHWARAN B',font=fb,fill=white)
-            for y,s in [(76,'UNITY DEVELOPER'),(113,'XR ENGINEER'),(150,'INTERACTIVE EXPERIENCES'),(187,'BUILDING IMMERSIVE WORLDS')]: d.text((1400,y),s,font=f,fill=white)
-            d.rounded_rectangle((360,85,1380,665),38,fill=(3,16,27),outline=cyan,width=6)
-            d.rounded_rectangle((ix,iy,ix+iw,iy+ih),28,fill=(0,11,19),outline=cyan,width=3)
+            d.text((50,38),'XR PROFILE',font=fb,fill=cyan)
+            for y,s in [(82,'SPATIAL COMPUTING'),(119,'REAL-TIME 3D'),(156,'COMPUTER VISION'),(193,'AR / VR / MR')]: d.text((50,y),s,font=f,fill=white)
+            d.text((1470,38),'VIGNESHWARAN B',font=fb,fill=white)
+            for y,s in [(82,'UNITY DEVELOPER'),(119,'XR ENGINEER'),(156,'INTERACTIVE EXPERIENCES'),(193,'BUILDING IMMERSIVE WORLDS')]: d.text((1470,y),s,font=f,fill=white)
+            d.rounded_rectangle((385,95,1495,765),40,fill=(3,16,27),outline=cyan,width=6)
+            d.rounded_rectangle((ix,iy,ix+iw,iy+ih),30,fill=(0,11,19),outline=cyan,width=3)
             mask=Image.new('L',(W,H)); md=ImageDraw.Draw(mask); md.rectangle((ix,iy,ix+int(iw*q),iy+ih),fill=255)
             layer=Image.new('RGB',(W,H)); layer.paste(photo,(ix,iy)); im.paste(layer,(0,0),mask)
-            d=ImageDraw.Draw(im); d.rounded_rectangle((ix,iy,ix+iw,iy+ih),28,outline=cyan,width=3)
+            d=ImageDraw.Draw(im); d.rounded_rectangle((ix,iy,ix+iw,iy+ih),30,outline=cyan,width=3)
             if q<1:
-              sx=ix+int(iw*q); gl=Image.new('RGBA',(W,H)); gd=ImageDraw.Draw(gl); gd.line((sx,iy,sx,iy+ih),fill=(*cyan,255),width=6); gd.line((sx-14,iy,sx+14,iy+ih),fill=(*cyan,70),width=16)
+              sx=ix+int(iw*q)
+              gl=Image.new('RGBA',(W,H)); gd=ImageDraw.Draw(gl)
+              gd.line((sx,iy,sx,iy+ih),fill=(*cyan,255),width=7)
+              gd.line((sx-16,iy,sx+16,iy+ih),fill=(*cyan,75),width=18)
               im=Image.alpha_composite(im.convert('RGBA'),gl.filter(ImageFilter.GaussianBlur(4))).convert('RGB'); d=ImageDraw.Draw(im)
-            for j,s in enumerate(['■ CORE ONLINE','■ ASSETS LOADED','■ PROFILE SYNC','■ READY SOON']): d.text((40,500+j*36),s,font=f,fill=cyan)
-            for j,s in enumerate(['● UNITY READY','● XR PIPELINE READY','● MODULES LOADED','● PROFILE READY']): d.text((1400,500+j*36),s,font=f,fill=cyan)
-            d.text((900,705),'LOADING...',font=fl,fill=white,anchor='mm'); d.text((900,743),'REVEALING XR PROFILE',font=f,fill=cyan,anchor='mm')
-            d.rounded_rectangle((180,775,1620,801),13,fill=(6,21,34),outline=cyan,width=3); d.rounded_rectangle((188,783,188+int(1424*q),793),5,fill=cyan)
-            for i in range(11): d.text((180+i*144,840),f'{i*10}%',font=fs,fill=cyan,anchor='mm')
+            for j,s in enumerate(['■ CORE ONLINE','■ ASSETS LOADED','■ PROFILE SYNC','■ READY SOON']): d.text((50,560+j*36),s,font=f,fill=cyan)
+            for j,s in enumerate(['● UNITY READY','● XR PIPELINE READY','● MODULES LOADED','● PROFILE READY']): d.text((1470,560+j*36),s,font=f,fill=cyan)
+            d.text((950,805),'LOADING...',font=fl,fill=white,anchor='mm'); d.text((950,842),'REVEALING XR PROFILE',font=f,fill=cyan,anchor='mm')
+            d.rounded_rectangle((180,875,1720,901),13,fill=(6,21,34),outline=cyan,width=3); d.rounded_rectangle((188,883,188+int(1524*q),893),5,fill=cyan)
+            for i in range(11): d.text((180+i*154,930),f'{i*10}%',font=fs,fill=cyan,anchor='mm')
             frames.append(im.quantize(colors=256,dither=Image.Dither.NONE))
           frames[0].save('assets/xr-profile-loading.gif',save_all=True,append_images=frames[1:],duration=280,disposal=2,optimize=True,loop=None)
-          Path('assets/xr-loading-screen.svg').write_text('<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="900"><rect width="1800" height="900" fill="#020914"/><text x="40" y="80" fill="#39e5ff" font-size="38" font-family="monospace">XR PROFILE</text><text x="1400" y="80" fill="#f5ffff" font-size="38" font-family="monospace">VIGNESHWARAN B</text><text x="900" y="850" fill="#39e5ff" font-size="20" font-family="monospace" text-anchor="middle">0%  10%  20%  30%  40%  50%  60%  70%  80%  90%  100%</text></svg>')
+          Path('assets/xr-loading-screen.svg').write_text('''<svg xmlns="http://www.w3.org/2000/svg" width="1900" height="960" viewBox="0 0 1900 960"><rect width="1900" height="960" fill="#020914"/><text x="50" y="76" fill="#39e5ff" font-size="38" font-family="monospace">XR PROFILE</text><text x="1470" y="76" fill="#f5ffff" font-size="38" font-family="monospace">VIGNESHWARAN B</text><text x="950" y="930" fill="#39e5ff" font-size="20" font-family="monospace" text-anchor="middle">0%  10%  20%  30%  40%  50%  60%  70%  80%  90%  100%</text></svg>''')
           Path('assets/xr-loading-screen-embedded.svg').write_text(Path('assets/xr-loading-screen.svg').read_text())
           PY
           python3 /tmp/build.py
-      - name: Commit and update profile
+      - name: Commit generated profile
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add assets/xr-profile-loading.gif assets/xr-loading-screen.svg assets/xr-loading-screen-embedded.svg
-          git diff --cached --quiet || git commit -m 'Widen XR profile image and right-side layout'
+          git diff --cached --quiet || git commit -m 'Smart fit XR photo and widen profile frame'
           git push
