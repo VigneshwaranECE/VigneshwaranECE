@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/VigneshwaranECE/VigneshwaranECE/main/assets/xr-profile-loading.gif?v=latestbox" width="100%" alt="XR profile scanning animation" />
+<img src="https://raw.githubusercontent.com/VigneshwaranECE/VigneshwaranECE/main/assets/xr-profile-loading.gif?v=wide860" width="100%" alt="XR profile scanning animation" />
 
 `XR ENGINEER` &nbsp; `SPATIAL COMPUTING` &nbsp; `REAL-TIME 3D` &nbsp; `COMPUTER VISION`
 
