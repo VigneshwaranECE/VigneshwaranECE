@@ -1,62 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1200 900" width="1200" height="900">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900">
 <defs>
-  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#050912"/><stop offset="1" stop-color="#0b1220"/></linearGradient>
-  <linearGradient id="bar" x1="0" x2="1"><stop stop-color="#00d9ff"/><stop offset=".65" stop-color="#6ff8ff"/><stop offset="1" stop-color="#fff"/></linearGradient>
-  <linearGradient id="beam" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#e8ffff"/><stop offset="1" stop-color="#00d9ff" stop-opacity="0"/></linearGradient>
-  <filter id="glow"><feGaussianBlur stdDeviation="7" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-  <filter id="soft"><feGaussianBlur stdDeviation="9"/></filter>
-  <clipPath id="photoReveal"><rect x="300" y="55" width="600" height="650" rx="30"><animate attributeName="height" values="0;0;650;650;0" keyTimes="0;.12;.64;.84;1" dur="7s" repeatCount="indefinite"/></rect></clipPath>
-  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#1682a8" stroke-opacity=".16"/></pattern>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#050912"/><stop offset="1" stop-color="#0b1220"/></linearGradient>
+<linearGradient id="bar" x1="0" x2="1"><stop stop-color="#00d9ff"/><stop offset=".65" stop-color="#6ff8ff"/><stop offset="1" stop-color="#fff"/></linearGradient>
+<linearGradient id="beam" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#e8ffff"/><stop offset="1" stop-color="#00d9ff" stop-opacity="0"/></linearGradient>
+<filter id="glow"><feGaussianBlur stdDeviation="7" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#1682a8" stroke-opacity=".16"/></pattern>
+<clipPath id="reveal"><rect x="300" y="55" width="600" height="650" rx="30"><animate attributeName="y" values="705;705;55;55;705" keyTimes="0;.12;.64;.84;1" dur="7s" repeatCount="indefinite"/></rect></clipPath>
 </defs>
-
-<rect width="1200" height="900" fill="url(#bg)"/>
-<rect width="1200" height="900" fill="url(#grid)"/>
-
-<g font-family="monospace" fill="#63eaff" letter-spacing="3">
-  <text x="55" y="55" font-size="18">XR PROFILE // SYSTEM BOOT</text>
-  <text x="1145" y="55" font-size="14" text-anchor="end">VIGNESHWARAN B</text>
-  <text x="55" y="95" font-size="12">SPATIAL COMPUTING</text>
-  <text x="1145" y="95" font-size="12" text-anchor="end">REAL-TIME 3D // COMPUTER VISION</text>
-</g>
-
-<rect x="290" y="45" width="620" height="670" rx="38" fill="#07101d" stroke="#00d9ff" stroke-opacity=".55" stroke-width="2"/>
-<rect x="300" y="55" width="600" height="650" rx="30" fill="#02050a"/>
-
-<!-- YOUR ACTUAL JPEG: Loading Image.jpeg -->
-<g clip-path="url(#photoReveal)">
-  <image x="300" y="55" width="600" height="650" preserveAspectRatio="xMidYMid slice"
-         href="https://raw.githubusercontent.com/VigneshwaranECE/VigneshwaranECE/main/assets/Loading%20Image.jpeg"
-         xlink:href="https://raw.githubusercontent.com/VigneshwaranECE/VigneshwaranECE/main/assets/Loading%20Image.jpeg"/>
-</g>
-
-<!-- soft glow behind the reveal -->
-<rect x="300" y="55" width="600" height="650" rx="30" fill="none" stroke="#00d9ff" stroke-opacity=".25" stroke-width="12" filter="url(#soft)"/>
-
-<!-- animated scan/reveal light -->
-<rect x="292" y="35" width="616" height="55" fill="url(#beam)" filter="url(#glow)">
-  <animate attributeName="y" values="35;35;685;685;35" keyTimes="0;.12;.64;.84;1" dur="7s" repeatCount="indefinite"/>
-  <animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;.12;.64;.84;1" dur="7s" repeatCount="indefinite"/>
-</rect>
-
-<g stroke="#63eaff" opacity=".22"><path d="M300 190H900"/><path d="M300 380H900"/><path d="M300 570H900"/></g>
-<g stroke="#00d9ff" stroke-width="4" fill="none"><path d="M270 115V65H320 M880 65H930V115 M270 645V695H320 M880 695H930V645"/></g>
-
-<g font-family="monospace" fill="#fff" text-anchor="middle">
-  <text x="600" y="765" font-size="44" font-weight="bold" letter-spacing="8">LOADING...</text>
-  <text x="600" y="795" font-size="13" fill="#63eaff" letter-spacing="4">REVEALING XR PROFILE</text>
-</g>
-
-<rect x="145" y="820" width="910" height="22" rx="11" fill="#07101d" stroke="#00d9ff" stroke-width="2"/>
-<rect x="155" y="826" width="0" height="10" rx="5" fill="url(#bar)" filter="url(#glow)">
-  <animate attributeName="width" values="0;0;890;890;0" keyTimes="0;.12;.64;.84;1" dur="7s" repeatCount="indefinite"/>
-</rect>
-
-<g font-family="monospace" font-size="13" fill="#63eaff">
-  <text x="145" y="865">0%</text><text x="327" y="865">20%</text><text x="509" y="865">40%</text><text x="691" y="865">60%</text><text x="873" y="865">80%</text><text x="1040" y="865">100%</text>
-</g>
-
-<g fill="#63eaff" font-family="monospace" font-size="12">
-  <text x="55" y="755">● CORE ONLINE</text><text x="55" y="780">● TRACKING ACTIVE</text>
-  <text x="1145" y="755" text-anchor="end">● UNITY READY</text><text x="1145" y="780" text-anchor="end">● XR PIPELINE READY</text>
-</g>
+<rect width="1200" height="900" fill="url(#bg)"/><rect width="1200" height="900" fill="url(#grid)"/>
+<g font-family="monospace" fill="#63eaff" letter-spacing="3"><text x="55" y="55" font-size="18">XR PROFILE // SYSTEM BOOT</text><text x="1145" y="55" font-size="14" text-anchor="end">VIGNESHWARAN B</text><text x="55" y="95" font-size="12">SPATIAL COMPUTING</text><text x="1145" y="95" font-size="12" text-anchor="end">REAL-TIME 3D // COMPUTER VISION</text></g>
+<rect x="290" y="45" width="620" height="670" rx="38" fill="#07101d" stroke="#00d9ff" stroke-opacity=".55" stroke-width="2"/><rect x="300" y="55" width="600" height="650" rx="30" fill="#02050a"/>
+<g clip-path="url(#reveal)"><image href="https://raw.githubusercontent.com/VigneshwaranECE/VigneshwaranECE/main/assets/xr-loading-portrait.svg" x="300" y="55" width="600" height="650" preserveAspectRatio="xMidYMid slice"/></g>
+<rect x="300" y="55" width="600" height="650" rx="30" fill="none" stroke="#00d9ff" stroke-opacity=".3" stroke-width="12" filter="url(#glow)"/>
+<rect x="292" y="35" width="616" height="55" fill="url(#beam)" filter="url(#glow)"><animate attributeName="y" values="35;35;685;685;35" keyTimes="0;.12;.64;.84;1" dur="7s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;.12;.64;.84;1" dur="7s" repeatCount="indefinite"/></rect>
+<g stroke="#63eaff" opacity=".22"><path d="M300 190H900"/><path d="M300 380H900"/><path d="M300 570H900"/></g><g stroke="#00d9ff" stroke-width="4" fill="none"><path d="M270 115V65H320 M880 65H930V115 M270 645V695H320 M880 695H930V645"/></g>
+<g font-family="monospace" fill="#fff" text-anchor="middle"><text x="600" y="765" font-size="44" font-weight="bold" letter-spacing="8">LOADING...</text><text x="600" y="795" font-size="13" fill="#63eaff" letter-spacing="4">REVEALING XR PROFILE</text></g>
+<rect x="145" y="820" width="910" height="22" rx="11" fill="#07101d" stroke="#00d9ff" stroke-width="2"/><rect x="155" y="826" width="0" height="10" rx="5" fill="url(#bar)" filter="url(#glow)"><animate attributeName="width" values="0;0;890;890;0" keyTimes="0;.12;.64;.84;1" dur="7s" repeatCount="indefinite"/></rect>
+<g font-family="monospace" font-size="13" fill="#63eaff"><text x="145" y="865">0%</text><text x="327" y="865">20%</text><text x="509" y="865">40%</text><text x="691" y="865">60%</text><text x="873" y="865">80%</text><text x="1040" y="865">100%</text></g>
+<g fill="#63eaff" font-family="monospace" font-size="12"><text x="55" y="755">● CORE ONLINE</text><text x="55" y="780">● TRACKING ACTIVE</text><text x="1145" y="755" text-anchor="end">● UNITY READY</text><text x="1145" y="780" text-anchor="end">● XR PIPELINE READY</text></g>
 </svg>
