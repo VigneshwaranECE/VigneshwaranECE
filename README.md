@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/VigneshwaranECE/VigneshwaranECE/main/assets/xr-loading-screen.svg" width="100%" alt="Animated XR loading screen" />
+<img src="https://raw.githubusercontent.com/VigneshwaranECE/VigneshwaranECE/main/assets/xr-loading-screen-embedded.svg" width="100%" alt="Animated XR loading screen" />
 
 `XR ENGINEER` &nbsp; `SPATIAL COMPUTING` &nbsp; `REAL-TIME 3D` &nbsp; `COMPUTER VISION`
 
