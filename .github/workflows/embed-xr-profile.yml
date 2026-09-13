@@ -1,7 +1,7 @@
 name: Build XR Profile Template
 on:
   push:
-    paths: ['assets/Loading Image.jpeg','.github/workflows/embed-xr-profile.yml']
+    paths: ['assets/Loading Image.jpeg','.github/workflows/embed-xr-profile.yml','README.md']
   workflow_dispatch:
 permissions:
   contents: write
@@ -27,7 +27,7 @@ jobs:
           mono='/usr/share/fonts/truetype/dejavu/'; f=ImageFont.truetype(mono+'DejaVuSansMono.ttf',25); fb=ImageFont.truetype(mono+'DejaVuSansMono-Bold.ttf',38); fl=ImageFont.truetype(mono+'DejaVuSansMono-Bold.ttf',56); fs=ImageFont.truetype(mono+'DejaVuSansMono.ttf',20)
           frames=[]; cyan=(57,229,255); white=(245,255,255)
           for k in range(26):
-            q=k/25; pct=round(q*100); im=Image.new('RGB',(W,H),(2,9,17)); d=ImageDraw.Draw(im)
+            q=k/25; im=Image.new('RGB',(W,H),(2,9,17)); d=ImageDraw.Draw(im)
             for y in range(0,H,28):
               for x in range(0,W,28): d.point((x,y),fill=(5,45,61))
             d.text((40,34),'XR PROFILE',font=fb,fill=cyan); d.text((40,76),'SPATIAL COMPUTING',font=f,fill=white); d.text((40,113),'REAL-TIME 3D',font=f,fill=white); d.text((40,150),'COMPUTER VISION',font=f,fill=white); d.text((40,187),'AR / VR / MR',font=f,fill=white); d.text((1260,34),'VIGNESHWARAN B',font=fb,fill=white); d.text((1260,76),'UNITY DEVELOPER',font=f,fill=white); d.text((1260,113),'XR ENGINEER',font=f,fill=white); d.text((1260,150),'INTERACTIVE EXPERIENCES',font=f,fill=white); d.text((1260,187),'BUILDING IMMERSIVE WORLDS',font=f,fill=white)
@@ -49,5 +49,5 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add assets/xr-loading-screen.svg assets/xr-loading-screen-embedded.svg assets/xr-profile-loading.gif README.md
-          git diff --cached --quiet || git commit -m 'Add 0 to 100 percent loading scale'
+          git diff --cached --quiet || git commit -m 'Regenerate XR profile GIF from template'
           git push
