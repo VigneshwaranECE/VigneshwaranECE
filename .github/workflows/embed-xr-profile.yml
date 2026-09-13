@@ -28,22 +28,13 @@ jobs:
           src = Path('assets/xr-loading-screen.svg')
           out = Path('assets/xr-loading-screen-embedded.svg')
           image = Path('assets/Loading Image.jpeg')
-
           svg = src.read_text(encoding='utf-8')
           data = base64.b64encode(image.read_bytes()).decode('ascii')
           embedded = 'data:image/jpeg;base64,' + data
-
-          svg, count = re.subn(
-              r'<image\s+href="[^"]+"',
-              '<image href="' + embedded + '"',
-              svg,
-              count=1,
-          )
+          svg, count = re.subn(r'<image\s+href="[^"]+"', '<image href="' + embedded + '"', svg, count=1)
           if count != 1:
-              raise SystemExit('Could not find the portrait image element in the SVG template.')
-
+              raise SystemExit('Could not find portrait image element.')
           out.write_text(svg, encoding='utf-8')
-          print(f'Created {out} with embedded JPEG ({len(data)} base64 chars).')
           PY
 
       - name: Commit generated SVG
