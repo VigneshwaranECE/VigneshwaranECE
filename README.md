@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/VigneshwaranECE/VigneshwaranECE/main/assets/xr-command-center.svg" width="100%" alt="XR Engineer Command Center" />
+<img src="https://raw.githubusercontent.com/VigneshwaranECE/VigneshwaranECE/main/assets/xr-loading-portrait.svg" width="100%" alt="Vigneshwaran B XR Loading Portrait" />
 
 <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=17&duration=1600&pause=500&center=true&vCenter=true&width=820&lines=XR+ENGINEER+%2F%2F+VIGNESHWARAN+B;INITIALIZING+SPATIAL+SYSTEMS...;AR+%7C+VR+%7C+MR+%7C+COMPUTER+VISION;UNITY+%7C+PICO+SDK+%7C+META+XR;BUILDING+IMMERSIVE+REALITY" alt="XR terminal animation" />
 
