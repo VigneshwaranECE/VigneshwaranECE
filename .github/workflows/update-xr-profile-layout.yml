@@ -18,9 +18,9 @@ jobs:
           from PIL import Image,ImageDraw,ImageFont,ImageEnhance,ImageFilter
           src=Path('assets/Loading Image.jpeg')
           W,H=2100,960
-          # Balanced center: frame center = 1030, with equal visual space between the side HUDs.
-          ix,iy,iw,ih=490,105,1080,650
-          rx=1640
+          # Move the photo/frame slightly left while keeping the complete composition balanced.
+          ix,iy,iw,ih=420,105,1080,650
+          rx=1570
           photo=Image.open(src).convert('RGB')
           photo=ImageEnhance.Contrast(photo).enhance(1.03)
           photo=ImageEnhance.Sharpness(photo).enhance(1.35)
@@ -72,5 +72,5 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+users.noreply.github.com'
           git add assets/xr-profile-loading.gif assets/xr-loading-screen.svg assets/xr-loading-screen-embedded.svg
-          git diff --cached --quiet || git commit -m 'Center XR profile frame'
+          git diff --cached --quiet || git commit -m 'Move XR profile frame slightly left'
           git push
