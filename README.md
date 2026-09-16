@@ -4,20 +4,27 @@
 
 `XR ENGINEER` &nbsp; `SPATIAL COMPUTING` &nbsp; `REAL-TIME 3D` &nbsp; `COMPUTER VISION`
 
-</div>
-
 ---
 
-## 👋 About Me
+<h2>👋 Hi, I'm Vigneshwaran B</h2>
 
-**Vigneshwaran B**  
-`XR Engineer` · `Unity Developer` · `XR AI Engineer`
+<p><strong>XR Engineer • Unity Developer • XR AI Engineer</strong></p>
 
-Building immersive **AR / VR / MR experiences** with **Unity, Spatial Computing, Computer Vision & AI.**
+<p>I build AR/VR/MR experiences with Unity,<br>
+spatial computing, computer vision and AI.</p>
 
-## ⚡ What I Do
+<h2>⚡ WHAT I DO</h2>
 
-🥽 **XR Development** — AR · VR · MR · Unity · OpenXR  
-🤖 **XR + AI** — Computer Vision · AI · Hand Tracking  
-🎮 **Real-Time 3D** — Interactive Experiences · Spatial Computing  
-🏭 **Industrial XR** — Training · Maintenance · Safety
+<p>🥽 <strong>XR DEVELOPMENT</strong><br>
+AR • VR • MR • Unity • OpenXR</p>
+
+<p>🤖 <strong>XR + AI</strong><br>
+Computer Vision • AI • Hand Tracking</p>
+
+<p>🎮 <strong>REAL-TIME 3D</strong><br>
+Interactive Experiences • Spatial Computing</p>
+
+<p>🏭 <strong>INDUSTRIAL XR</strong><br>
+Training • Maintenance • Safety</p>
+
+</div>
