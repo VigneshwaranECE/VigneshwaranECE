@@ -41,25 +41,38 @@ jobs:
             for i in range(11): d.text((180+i*124,840),f'{i*10}%',font=fs,fill=cyan,anchor='mm')
             frames.append(im.quantize(colors=256,dither=Image.Dither.NONE))
           frames[0].save('assets/xr-profile-loading.gif',save_all=True,append_images=frames[1:],duration=280,disposal=2,optimize=True,loop=None)
-          # Separate animated identity / What I Do section
-          SW,SH=1400,1500; mono='/usr/share/fonts/truetype/dejavu/'; title=ImageFont.truetype(mono+'DejaVuSansMono-Bold.ttf',58); big=ImageFont.truetype(mono+'DejaVuSansMono-Bold.ttf',38); sub=ImageFont.truetype(mono+'DejaVuSansMono.ttf',25); small=ImageFont.truetype(mono+'DejaVuSansMono.ttf',20)
+          # Small, compact identity + What I Do GIF with drawn icons (no emoji font dependency)
+          SW,SH=980,760; cyan=(57,229,255); white=(245,255,255); purple=(210,100,255); orange=(255,145,35); blue=(45,150,255)
+          mono='/usr/share/fonts/truetype/dejavu/'; title=ImageFont.truetype(mono+'DejaVuSansMono-Bold.ttf',38); role=ImageFont.truetype(mono+'DejaVuSansMono-Bold.ttf',18); sub=ImageFont.truetype(mono+'DejaVuSansMono.ttf',15); cardtitle=ImageFont.truetype(mono+'DejaVuSansMono-Bold.ttf',16); small=ImageFont.truetype(mono+'DejaVuSansMono.ttf',12)
+          def icon(d,x,y,kind,col,scale=1):
+            if kind=='vr':
+              d.rounded_rectangle((x-42*scale,y-24*scale,x+42*scale,y+24*scale),14*scale,outline=col,width=max(2,int(4*scale))); d.line((x-25*scale,y+24*scale,x-32*scale,y+34*scale),fill=col,width=max(2,int(3*scale))); d.line((x+25*scale,y+24*scale,x+32*scale,y+34*scale),fill=col,width=max(2,int(3*scale))); d.line((x-12*scale,y,x+12*scale,y),fill=col,width=max(2,int(3*scale)))
+            elif kind=='unity':
+              pts=[(x,y-42*scale),(x+37*scale,y-20*scale),(x+28*scale,y+30*scale),(x,y+42*scale),(x-28*scale,y+30*scale),(x-37*scale,y-20*scale)]; d.line(pts+[pts[0]],fill=col,width=max(2,int(4*scale))); d.line((x-28*scale,y+30*scale,x+8*scale,y-5*scale,x+37*scale,y-20*scale),fill=col,width=max(2,int(3*scale)))
+            elif kind=='brain':
+              d.arc((x-42*scale,y-40*scale,x+5*scale,y+40*scale),90,270,fill=col,width=max(2,int(4*scale))); d.arc((x-5*scale,y-40*scale,x+42*scale,y+40*scale),270,90,fill=col,width=max(2,int(4*scale))); d.line((x,y-40*scale,x,y+40*scale),fill=col,width=max(2,int(3*scale))); d.arc((x-30*scale,y-18*scale,x,y+8*scale),270,90,fill=col,width=max(2,int(2*scale))); d.arc((x,y-8*scale,x+30*scale,y+18*scale),90,270,fill=col,width=max(2,int(2*scale)))
+            elif kind=='cube':
+              pts=[(x,y-34*scale),(x+34*scale,y-14*scale),(x+34*scale,y+25*scale),(x,y+44*scale),(x-34*scale,y+25*scale),(x-34*scale,y-14*scale)]; d.line(pts+[pts[0]],fill=col,width=max(2,int(4*scale))); d.line((x,y-34*scale,x,y+44*scale),fill=col,width=max(2,int(3*scale))); d.line((x-34*scale,y-14*scale,x,y+5*scale,x+34*scale,y-14*scale),fill=col,width=max(2,int(3*scale)))
+            elif kind=='crane':
+              d.line((x-42*scale,y+35*scale,x+42*scale,y+35*scale),fill=col,width=max(2,int(4*scale))); d.line((x-32*scale,y+35*scale,x-32*scale,y-32*scale,x+34*scale,y-32*scale),fill=col,width=max(2,int(4*scale))); d.line((x+15*scale,y-32*scale,x+15*scale,y+12*scale),fill=col,width=max(2,int(3*scale))); d.arc((x+7*scale,y+10*scale,x+23*scale,y+27*scale),0,180,fill=col,width=max(2,int(3*scale)))
+            elif kind=='vision':
+              d.ellipse((x-44*scale,y-28*scale,x+44*scale,y+28*scale),outline=col,width=max(2,int(4*scale))); d.ellipse((x-15*scale,y-15*scale,x+15*scale,y+15*scale),outline=col,width=max(2,int(4*scale)))
           def identity_frame(step):
-            im=Image.new('RGB',(SW,SH),(2,9,17)); d=ImageDraw.Draw(im); cyan=(57,229,255); white=(245,255,255); purple=(210,100,255); orange=(255,145,35)
-            for y in range(0,SH,35):
-              for x in range(0,SW,35): d.point((x,y),fill=(5,45,61))
-            d.text((SW//2,90),'HI, I\'M',font=sub,fill=cyan,anchor='mm'); d.text((SW//2,175),'VIGNESHWARAN B',font=title,fill=white,anchor='mm')
-            roles=[('🥽','XR ENGINEER',cyan,230),('▣','UNITY DEVELOPER',white,700),('◉','XR AI ENGINEER',cyan,1170)]
-            for icon,label,col,x in roles: d.text((x,430),icon,font=big,fill=col,anchor='mm'); d.text((x,555),label,font=big,fill=white,anchor='mm')
-            d.text((SW//2,690),'⚡  WHAT I DO',font=title,fill=cyan,anchor='mm')
-            cards=[('XR DEVELOPMENT','AR  •  VR  •  MR','Unity  •  OpenXR',cyan),('XR + AI','Computer Vision','AI  •  Hand Tracking',purple),('REAL-TIME 3D','Interactive Experiences','Spatial Computing',cyan),('INDUSTRIAL XR','Training  •  Maintenance','Safety',orange)]
-            xs=[40,375,710,1045]
-            for x,(a,b,c,col) in zip(xs,cards):
-              d.rounded_rectangle((x,780,x+315,1260),28,fill=(4,14,25),outline=col,width=5); d.ellipse((x+92,820,x+223,951),outline=col,width=4); d.text((x+157,885),'◈',font=big,fill=col,anchor='mm'); d.text((x+157,1010),a,font=big,fill=col,anchor='mm'); d.text((x+157,1080),b,font=small,fill=white,anchor='mm'); d.text((x+157,1120),c,font=small,fill=white,anchor='mm'); d.rounded_rectangle((x+105,1195,x+210,1203),4,fill=col)
-            d.text((SW//2,1370),'BUILDING IMMERSIVE WORLDS',font=sub,fill=cyan,anchor='mm')
-            # subtle scanning glow
-            sy=int((step/7)*(SH-1)); glow=Image.new('RGBA',(SW,SH)); gd=ImageDraw.Draw(glow); gd.line((0,sy,SW,sy),fill=(*cyan,70),width=3); gd.rectangle((0,max(0,sy-12),SW,min(SH,sy+12)),fill=(*cyan,8)); im=Image.alpha_composite(im.convert('RGBA'),glow.filter(ImageFilter.GaussianBlur(3))).convert('RGB'); return im.quantize(colors=256,dither=Image.Dither.NONE)
+            im=Image.new('RGB',(SW,SH),(2,9,17)); d=ImageDraw.Draw(im)
+            for y in range(0,SH,28):
+              for x in range(0,SW,28): d.point((x,y),fill=(5,45,61))
+            d.text((SW//2,38),'HI, I\'M',font=sub,fill=cyan,anchor='mm'); d.text((SW//2,78),'VIGNESHWARAN B',font=title,fill=white,anchor='mm')
+            roles=[('vr','XR ENGINEER',cyan,170),('unity','UNITY DEVELOPER',white,490),('brain','XR AI ENGINEER',cyan,810)]
+            for kind,label,col,x in roles: icon(d,x,145,kind,col,.72); d.text((x,207),label,font=role,fill=white,anchor='mm')
+            d.text((SW//2,265),'⚡  WHAT I DO',font=title,fill=cyan,anchor='mm')
+            cards=[('vr','XR DEVELOPMENT','AR  •  VR  •  MR','Unity  •  OpenXR',cyan),('vision','XR + AI','Computer Vision','AI  •  Hand Tracking',purple),('cube','REAL-TIME 3D','Interactive Experiences','Spatial Computing',blue),('crane','INDUSTRIAL XR','Training  •  Maintenance','Safety',orange)]
+            xs=[24,266,508,750]
+            for x,(kind,a,b,c,col) in zip(xs,cards):
+              d.rounded_rectangle((x,315,x+206,610),16,fill=(4,14,25),outline=col,width=3); icon(d,x+103,372,kind,col,.55); d.text((x+103,443),a,font=cardtitle,fill=col,anchor='mm'); d.text((x+103,492),b,font=small,fill=white,anchor='mm'); d.text((x+103,516),c,font=small,fill=white,anchor='mm'); d.rounded_rectangle((x+72,570,x+134,575),3,fill=col)
+            d.text((SW//2,690),'BUILDING IMMERSIVE WORLDS',font=sub,fill=cyan,anchor='mm')
+            sy=int((step/7)*(SH-1)); glow=Image.new('RGBA',(SW,SH)); gd=ImageDraw.Draw(glow); gd.line((0,sy,SW,sy),fill=(*cyan,55),width=2); im=Image.alpha_composite(im.convert('RGBA'),glow.filter(ImageFilter.GaussianBlur(3))).convert('RGB'); return im.quantize(colors=256,dither=Image.Dither.NONE)
           idframes=[identity_frame(i) for i in range(8)]; idframes[0].save('assets/xr-identity-what-i-do.gif',save_all=True,append_images=idframes[1:],duration=220,disposal=2,optimize=True,loop=0)
-          p=Path('README.md'); s=p.read_text(); s=re.sub(r'<img src="https://raw\.githubusercontent\.com/VigneshwaranECE/VigneshwaranECE/main/assets/xr-profile-loading\.gif(?:\?v=[^"]+)?"[^>]*>', '<img src="https://raw.githubusercontent.com/VigneshwaranECE/VigneshwaranECE/main/assets/xr-profile-loading.gif?v=xrai5" width="100%" alt="XR profile scanning animation" />', s, count=1); p.write_text(s)
+          p=Path('README.md'); s=p.read_text(); s=re.sub(r'<img src="https://raw\.githubusercontent\.com/VigneshwaranECE/VigneshwaranECE/main/assets/xr-profile-loading\.gif(?:\?v=[^"]+)?"[^>]*>', '<img src="https://raw.githubusercontent.com/VigneshwaranECE/VigneshwaranECE/main/assets/xr-profile-loading.gif?v=xrai6" width="100%" alt="XR profile scanning animation" />', s, count=1); p.write_text(s)
           PY
           python3 /tmp/build.py
       - name: Commit generated files
@@ -67,5 +80,5 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add assets/xr-loading-screen.svg assets/xr-loading-screen-embedded.svg assets/xr-profile-loading.gif assets/xr-identity-what-i-do.gif README.md
-          git diff --cached --quiet || git commit -m 'Add separate XR identity and What I Do GIF'
+          git diff --cached --quiet || git commit -m 'Regenerate compact XR identity GIF with icons'
           git push
