@@ -6,25 +6,6 @@
 
 ---
 
-<h2>👋 Hi, I'm Vigneshwaran B</h2>
-
-<p><strong>XR Engineer • Unity Developer • XR AI Engineer</strong></p>
-
-<p>I build AR/VR/MR experiences with Unity,<br>
-spatial computing, computer vision and AI.</p>
-
-<h2>⚡ WHAT I DO</h2>
-
-<p>🥽 <strong>XR DEVELOPMENT</strong><br>
-AR • VR • MR • Unity • OpenXR</p>
-
-<p>🤖 <strong>XR + AI</strong><br>
-Computer Vision • AI • Hand Tracking</p>
-
-<p>🎮 <strong>REAL-TIME 3D</strong><br>
-Interactive Experiences • Spatial Computing</p>
-
-<p>🏭 <strong>INDUSTRIAL XR</strong><br>
-Training • Maintenance • Safety</p>
+<img src="https://raw.githubusercontent.com/VigneshwaranECE/VigneshwaranECE/main/assets/xr-identity-what-i-do.gif?v=1" width="100%" alt="XR identity and what I do" />
 
 </div>
