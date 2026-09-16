@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: python3 -m pip install --quiet Pillow
-      - name: Build SVG and animated GIF
+      - name: Build XR profile assets
         run: |
           cat > /tmp/build.py <<'PY'
           import base64,re
@@ -41,13 +41,31 @@ jobs:
             for i in range(11): d.text((180+i*124,840),f'{i*10}%',font=fs,fill=cyan,anchor='mm')
             frames.append(im.quantize(colors=256,dither=Image.Dither.NONE))
           frames[0].save('assets/xr-profile-loading.gif',save_all=True,append_images=frames[1:],duration=280,disposal=2,optimize=True,loop=None)
-          p=Path('README.md'); s=p.read_text(); s=re.sub(r'<img src="https://raw\\.githubusercontent\\.com/VigneshwaranECE/VigneshwaranECE/main/assets/xr-profile-loading\\.gif(?:\\?v=[^"]+)?"[^>]*>','<img src="https://raw.githubusercontent.com/VigneshwaranECE/VigneshwaranECE/main/assets/xr-profile-loading.gif?v=xrai4" width="100%" alt="XR profile scanning animation" />',s,count=1); p.write_text(s)
+          # Separate animated identity / What I Do section
+          SW,SH=1400,1500; mono='/usr/share/fonts/truetype/dejavu/'; title=ImageFont.truetype(mono+'DejaVuSansMono-Bold.ttf',58); big=ImageFont.truetype(mono+'DejaVuSansMono-Bold.ttf',38); sub=ImageFont.truetype(mono+'DejaVuSansMono.ttf',25); small=ImageFont.truetype(mono+'DejaVuSansMono.ttf',20)
+          def identity_frame(step):
+            im=Image.new('RGB',(SW,SH),(2,9,17)); d=ImageDraw.Draw(im); cyan=(57,229,255); white=(245,255,255); purple=(210,100,255); orange=(255,145,35)
+            for y in range(0,SH,35):
+              for x in range(0,SW,35): d.point((x,y),fill=(5,45,61))
+            d.text((SW//2,90),'HI, I\'M',font=sub,fill=cyan,anchor='mm'); d.text((SW//2,175),'VIGNESHWARAN B',font=title,fill=white,anchor='mm')
+            roles=[('🥽','XR ENGINEER',cyan,230),('▣','UNITY DEVELOPER',white,700),('◉','XR AI ENGINEER',cyan,1170)]
+            for icon,label,col,x in roles: d.text((x,430),icon,font=big,fill=col,anchor='mm'); d.text((x,555),label,font=big,fill=white,anchor='mm')
+            d.text((SW//2,690),'⚡  WHAT I DO',font=title,fill=cyan,anchor='mm')
+            cards=[('XR DEVELOPMENT','AR  •  VR  •  MR','Unity  •  OpenXR',cyan),('XR + AI','Computer Vision','AI  •  Hand Tracking',purple),('REAL-TIME 3D','Interactive Experiences','Spatial Computing',cyan),('INDUSTRIAL XR','Training  •  Maintenance','Safety',orange)]
+            xs=[40,375,710,1045]
+            for x,(a,b,c,col) in zip(xs,cards):
+              d.rounded_rectangle((x,780,x+315,1260),28,fill=(4,14,25),outline=col,width=5); d.ellipse((x+92,820,x+223,951),outline=col,width=4); d.text((x+157,885),'◈',font=big,fill=col,anchor='mm'); d.text((x+157,1010),a,font=big,fill=col,anchor='mm'); d.text((x+157,1080),b,font=small,fill=white,anchor='mm'); d.text((x+157,1120),c,font=small,fill=white,anchor='mm'); d.rounded_rectangle((x+105,1195,x+210,1203),4,fill=col)
+            d.text((SW//2,1370),'BUILDING IMMERSIVE WORLDS',font=sub,fill=cyan,anchor='mm')
+            # subtle scanning glow
+            sy=int((step/7)*(SH-1)); glow=Image.new('RGBA',(SW,SH)); gd=ImageDraw.Draw(glow); gd.line((0,sy,SW,sy),fill=(*cyan,70),width=3); gd.rectangle((0,max(0,sy-12),SW,min(SH,sy+12)),fill=(*cyan,8)); im=Image.alpha_composite(im.convert('RGBA'),glow.filter(ImageFilter.GaussianBlur(3))).convert('RGB'); return im.quantize(colors=256,dither=Image.Dither.NONE)
+          idframes=[identity_frame(i) for i in range(8)]; idframes[0].save('assets/xr-identity-what-i-do.gif',save_all=True,append_images=idframes[1:],duration=220,disposal=2,optimize=True,loop=0)
+          p=Path('README.md'); s=p.read_text(); s=re.sub(r'<img src="https://raw\.githubusercontent\.com/VigneshwaranECE/VigneshwaranECE/main/assets/xr-profile-loading\.gif(?:\?v=[^"]+)?"[^>]*>', '<img src="https://raw.githubusercontent.com/VigneshwaranECE/VigneshwaranECE/main/assets/xr-profile-loading.gif?v=xrai5" width="100%" alt="XR profile scanning animation" />', s, count=1); p.write_text(s)
           PY
           python3 /tmp/build.py
       - name: Commit generated files
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add assets/xr-loading-screen.svg assets/xr-loading-screen-embedded.svg assets/xr-profile-loading.gif README.md
-          git diff --cached --quiet || git commit -m 'Regenerate XR profile GIF with aligned reveal text'
+          git add assets/xr-loading-screen.svg assets/xr-loading-screen-embedded.svg assets/xr-profile-loading.gif assets/xr-identity-what-i-do.gif README.md
+          git diff --cached --quiet || git commit -m 'Add separate XR identity and What I Do GIF'
           git push
