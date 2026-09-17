@@ -10,6 +10,6 @@
 
 <br>
 
-<img src="https://streak-stats.demolab.com/?user=VigneshwaranECE&background=000000&border=000000&stroke=9B91D8&ring=FFD700&fire=FFD700&currStreakNum=B66CFF&sideNums=FFD700&currStreakLabel=B66CFF&sideLabels=FFD700&dates=9B91D8&hide_border=true" width="70%" alt="GitHub contribution streak statistics" />
+<img src="https://streak-stats.demolab.com/?user=VigneshwaranECE&background=020911&border=020911&stroke=9B91D8&ring=FFD700&fire=FFD700&currStreakNum=B66CFF&sideNums=FFD700&currStreakLabel=B66CFF&sideLabels=FFD700&dates=9B91D8&hide_border=true" width="70%" alt="GitHub contribution streak statistics" />
 
 </div>
